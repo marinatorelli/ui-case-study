@@ -1,5 +1,7 @@
 body {
 	margin: 0;
+	position: relative;
+	width: 100%;
 	background-color: #52BE80;
 	font-family: Roboto;
 }
@@ -20,6 +22,16 @@ header {
 	float: left;
 	padding: 20px;
 	display: flex;
+}
+
+header img {
+	height: 60px;
+	width: 60px;
+}
+
+header h1 {
+	padding-left: 20px;
+	margin-top: 10px;
 }
 
 nav {
@@ -61,6 +73,19 @@ a:hover {
 	background-color: #f2f2f2;
 }
 
+#holis {
+	margin-top: 130px;
+	box-sizing: border-box;
+	padding-left: 2%;
+	float: left;
+	width: 50%;
+}
+
+.slogan {
+	float: right;
+	width: 50%;
+}
+
 .slogan h1 {
 	margin: 0;
 	text-align: right;
@@ -73,11 +98,66 @@ a:hover {
 }
 
 .get-started {
-	margin-top: 60px;
-	margin-right: 8%;
+	margin: 60px 8%;
 	font-size: 2em;
+	margin
 }
 
 .get-started a:link, .get-started a:visited {
 	padding: 15px 30px;
+}
+
+.description {
+	float: left;
+	width: 50%;
+	background-color: white;
+}
+
+footer {
+	clear: both;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	background-color: white;
+	display: flex;
+}
+
+footer a:link, footer a:visited {
+	float: left;
+	width: 100%;
+	margin: 0;
+	color: black;
+	padding: 5px;
+}
+
+footer img {
+	width: 55px;
+	height: 55px;
+	float: left;
+}
+
+.company {
+	padding-left: 20px;
+	width: 50%;
+	color: #52BE80;
+}
+
+.company h1 {
+	float: left;
+	margin: 20px 10px 0;
+}
+
+.company p {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+	color: black;
+}
+
+.column {
+	width: 15%;
+	font-family: 'Open Sans';
+	font-size: 0.5em;
 }
