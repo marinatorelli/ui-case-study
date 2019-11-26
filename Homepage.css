@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+	background-color: #52BE80;
+	font-family: Roboto;
+}
+
+/* Clear floats after the columns */
+.top-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+header {
+	box-sizing: border-box;
+	font-family: Advent Pro;
+	font-weight: bold;
+	color: white;
+	width: 20%;
+	float: left;
+	padding: 20px;
+	display: flex;
+}
+
+nav {
+	float: left;
+	margin-top: 40px;
+}
+
+/* Navigation link */
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+	margin: 30px;
+}
+
+a:hover {
+	color: #f2f2f2;
+}
+
+#login {
+	margin-top: 40px;
+	margin-right: 0;
+	float: right;
+}
+
+.button {
+	margin-top: 40px;
+	float: right;
+}
+
+.button a:link, .button a:visited {
+	text-align: center;
+	color: black;
+	background-color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.register a:hover {
+	background-color: #f2f2f2;
+}
+
+.slogan h1 {
+	margin: 0;
+	text-align: right;
+	font-size: 5.5em;
+	padding: 5px 10%;
+}
+
+#white {
+	color: white;
+}
+
+.get-started {
+	margin-top: 60px;
+	margin-right: 8%;
+	font-size: 2em;
+}
+
+.get-started a:link, .get-started a:visited {
+	padding: 15px 30px;
+}
