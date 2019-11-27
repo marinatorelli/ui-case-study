@@ -1,7 +1,5 @@
 body {
 	margin: 0;
-	position: relative;
-	width: 100%;
 	background-color: #52BE80;
 	font-family: Roboto;
 }
@@ -73,24 +71,28 @@ a:hover {
 	background-color: #f2f2f2;
 }
 
-#holis {
+#first-photo {
 	margin-top: 130px;
 	box-sizing: border-box;
 	padding-left: 2%;
 	float: left;
-	width: 50%;
-}
-
-.slogan {
-	float: right;
-	width: 50%;
+	width: 45%;
 }
 
 .slogan h1 {
+	float: left;
 	margin: 0;
+	width: 55%;
 	text-align: right;
 	font-size: 5.5em;
 	padding: 5px 10%;
+	box-sizing: border-box;
+}
+
+.slogan:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 #white {
@@ -110,13 +112,36 @@ a:hover {
 .description {
 	float: left;
 	width: 50%;
+	position: relative;
+	display: inline-block;
 	background-color: white;
+	padding-top: 20px;
+}
+
+.description h2 {
+	position: absolute;
+	left: 20%;
+	top: 20px;
+	width: 30%;
+}
+
+.description img {
+	float: right;
+	max-height: 200px;
+	padding: 40px;
+}
+
+#green {
+	color: #52BE80;
+}
+
+hr {
+	background-color: white;
+	margin: 0;
 }
 
 footer {
 	clear: both;
-	position: relative;
-	bottom: 0;
 	width: 100%;
 	box-sizing: border-box;
 	padding: 30px;
