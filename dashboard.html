@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Icons and fonts --> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+	<title>Exercise 3</title>
+	<!-- CSS style -->
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+	<!-- Java Script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src = "dashboard.js"></script> 
+</head>
+
+<body>
+	<!-- TOP LINE-->
+	<div class = header>
+		<img src = Images/whitelogo.png>
+		<h1> Struo </h1>
+		<i class = "material-icons">settings_applications</i>
+		<i class = "material-icons">add_alert</i>
+	</div>
+
+	<div class = "main side-bar">
+		<div id = side-header> 
+			<img src = Images/university.png>
+			<h1> University </h1>
+			<i class = material-icons> chevron_left </i>
+		</div>
+
+		<div id = top-group>
+			<div class = shortcut id = today> 
+				<i class = material-icons> today </i>
+				<p> Today </p> </div>
+			<div class = shortcut id = next-week> 
+				<i class = material-icons> calendar_today </i>
+				<p> Next Week  </p> </div>
+			<div class = shortcut id = calendar-view> 
+				<i class = material-icons> calendar_today </i>
+				<p> Calendar View </p> </div>
+			<div class = shortcut id = quick-find> 
+				<i class = material-icons> search </i>
+				<p> Quick Find </p> </div>
+		</div>
+		
+		<div> <hr> </div>
+		
+		<div class = side-bar-group id = projects>
+			<div class = group-header id = project-header> 
+				<div> <i class = material-icons> keyboard_arrow_down </i> </div>
+				<p> Projects </p>
+				<div class = side-add> <i class = material-icons> add </i> </div>
+			</div>
+			
+			<div class = group-circles> 
+				<div class = circle id = ui>
+					<i class = material-icons> fiber_manual_record </i>
+					<p> User Interfaces </p>
+				</div>
+				<div class = circle id = ca>
+					<i class = material-icons> fiber_manual_record </i>
+					<p> Computer Architecture </p>
+				</div>
+				<div class = circle id = swe>
+					<i class = material-icons> fiber_manual_record </i>
+					<p> Software Engineering </p>
+				</div>
+				<div class = circle id = cn>
+					<i class = material-icons> fiber_manual_record </i>
+					<p> Computer Networks </p>
+				</div>
+				<div class = circle id = ho>
+					<i class = material-icons> fiber_manual_record </i>
+					<p> Heuristics & Optimization </p>
+				</div>
+				<div class = circle id = add>
+					<i class = material-icons> add </i>
+					<p> Add Project </p>
+				</div>
+			</div>
+		</div>
+
+		<div> <hr> </div>
+
+		<div class = side-bar-group id = labels>
+			<div class = group-header id = project-header> 
+				<div> <i class = material-icons> keyboard_arrow_down </i> </div>
+				<p> Labels </p>
+				<div class = side-add> <i class = material-icons> add </i> </div>
+			</div>
+			
+			<div class = group-circles> 
+				<div class = circle id = op>
+					<i class = material-icons> label </i>
+					<p> Optional </p>
+				</div>
+				<div class = circle id = assign>
+					<i class = material-icons> label </i>
+					<p> Assignment </p>
+				</div>
+				<div class = circle id = lab>
+					<i class = material-icons> label </i>
+					<p> Lab </p>
+				</div>
+				<div class = circle id = exam>
+					<i class = material-icons> label </i>
+					<p> Exam </p>
+				</div>
+				<div class = circle id = add>
+					<i class = material-icons> add </i>
+					<p> Add Label </p>
+				</div>
+			</div>
+		</div>
+
+		<div> <hr> </div>
+
+		<div class = side-bar-group id = labels>
+				
+				<div class = group-circles id = bottom> 
+					<div class = circle>
+						<i class = material-icons> archive </i>
+						<p> My archive </p>
+					</div>
+					<div class = circle>
+						<i class = material-icons> history </i>
+						<p> My activity </p>
+					</div>
+					<div class = circle>
+						<i class = material-icons> delete_sweep </i>
+						<p> Trash </p>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+
+	<div class = main id = main-body> 
+		<h1> Computer Architecture </h1>
+		<div class = flex-container> 
+			<div class = category>
+				<div> 
+					<h2> Not Started </h2>
+					<div class = top-right-icons>
+						<i class = material-icons> add </i>
+						<i class = material-icons> more_horiz </i>
+					</div>
+				</div>
+				<div class = task>
+					<div> 
+						<i class = material-icons> radio_button_unchecked </i>
+						<h3> Write sequential code </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					
+					<div> 
+						<p> Download new version from Github and keep writing the remaining functions.
+						Upload it all to Github.</p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-lab" >
+							<i class = material-icons> label </i>
+							<p> Lab </p>
+						</div>
+					</div>
+				</div>
+				<div class = task>
+					<div>
+						<i class = material-icons> radio_button_unchecked </i>
+						<h3> Write parallel code </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					<div> 
+						<p> Pick 5 functions and rewrite them in parallel. 
+							Add comments and upload it to the shared Github project. </p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-lab" >
+							<i class = material-icons> label </i>
+							<p> Lab </p>
+						</div>
+					</div>
+				</div>
+				<div class = task>
+					<div>
+						<i class = material-icons> radio_button_unchecked </i>
+						<h3> Write report PDF </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					<div> 
+						<p> Write introduction and explain my functions.
+							 Write conclusions from the output. </p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-lab" >
+							<i class = material-icons> label </i>
+							<p> Lab </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = category>
+				<div> 
+					<h2> In Progress </h2>
+					<div class = top-right-icons>
+						<i class = material-icons> add </i>
+						<i class = material-icons> more_horiz </i>
+					</div>
+				</div>
+				<div class = task>
+					<div>
+						<i class = material-icons> radio_button_unchecked </i>
+						<h3> Chapter 4 notes </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					<div> 
+						<p> Write notes for next week's exam </p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-optional" >
+							<i class = material-icons> label </i>
+							<p> Optional </p>
+						</div>
+					</div>
+				</div>
+				<div class = task>
+					<div>
+						<i class = material-icons> radio_button_unchecked </i>
+						<h3> Heuristics notes </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					<div> 
+						<p> Write notes from the last two weeks </p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-optional" >
+							<i class = material-icons> label </i>
+							<p> Optional </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = category>
+				<div> 
+					<h2> Completed </h2>
+					<div class = top-right-icons>
+						<i class = material-icons> add </i>
+						<i class = material-icons> more_horiz </i>
+					</div>
+				</div>
+				<div class = task>
+					<div>
+						<i class = material-icons> fiber_manual_record </i>
+						<h3> Chapter 4 notes </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					<div> 
+						<p> Write notes for next week's exam </p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-exam" >
+							<i class = material-icons> label </i>
+							<p> Optional </p>
+						</div>
+					</div>
+				</div>
+				<div class = task>
+					<div>
+						<i class = material-icons> fiber_manual_record </i>
+						<h3> Heuristics notes </h3>
+						<div class = top-right-icons> 
+							<i class = material-icons> more_horiz </i>
+						</div>
+					</div>
+					<div> 
+						<p> Write notes from the last two weeks </p>
+					</div>
+					<div class = tags>
+						<div class = "tag tag-exam">
+							<i class = material-icons> label </i>
+							<p> Optional </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+</body>
