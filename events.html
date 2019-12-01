@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Icons and fonts --> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+	<title> Struo </title>
+	<!-- CSS style -->
+    <link rel="stylesheet" type="text/css" href="events.css">
+	<link rel="stylesheet" type="text/css" href="page.css">
+	<!-- Java Script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src = "functions.js"></script>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<img src="images/white_logo.png" alt="Logo">
+		<h1> Struo </h1>
+		<i class="material-icons">settings</i>
+		<i class="material-icons">notifications</i>
+	</header>
+	<!-- SIDE MENU -->
+	<div class="side-bar">
+		<div class="side-header"> 
+			<div class="logo">
+				<h1> U </h1>
+			</div>
+			<h1> University </h1>
+			<i class='fas fa-angle-double-left'></i>
+		</div>
+		<div class="top-group">
+			<div class = shortcut > 
+				<i class='fas fa-calendar-day' id="light-green"></i>
+				<p> Today </p> 
+			</div>
+			<div class = shortcut> 
+				<i class='fas fa-calendar-week' id="red"></i>
+				<p> Next Week  </p>
+			</div>
+			<div class = shortcut> 
+				<i class='far fa-calendar-alt' id="dark-grey"></i>
+				<p> Calendar View </p> 
+			</div>
+			<div class="shortcut"> 
+				<i class='fas fa-search'id="grey"></i>
+				<p> Quick Find </p> 
+			</div>
+		</div>		
+		<hr>	
+		<div class="side-bar-group">
+			<div class="group-header"> 
+				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
+				<p> Projects </p>
+				<i class="material-icons add">add</i>
+			</div>	
+			<div class="dropdown"> 
+				<div class="element">
+					<i class='fas fa-circle' id="purple"></i>
+					<p> User Interfaces </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="dark-blue"></i>
+					<p> Computer Architecture </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="red"></i>
+					<p> Software Engineering </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="dark-green"></i>
+					<p> Computer Networks </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="mustard"></i>
+					<p> Heuristics & Optimization </p>
+				</div>
+				<div class="element" id="grey">
+					<i class="material-icons">add</i>
+					<p> Add Project </p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="side-bar-group">
+			<div class="group-header"> 
+				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
+				<p> Labels </p>
+				<i class="material-icons add">add</i>
+			</div>
+			
+			<div class="dropdown"> 
+				<div class="element">
+					<i class='fas fa-tag' id="purple"></i>
+					<p> Optional </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-tag' id="dark-green"></i>
+					<p> Assigment </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-tag' id="mustard"></i>
+					<p> Lab </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-tag' id="red"></i>
+					<p> Exam </p>
+				</div>
+				<div class="element" id="grey">
+					<i class="material-icons">add</i>
+					<p> Add Label </p>
+				</div>
+			</div>
+		</div>	
+		<hr>	
+		<div class="side-bar-group">
+			<div class="group-header"> 
+				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
+				<p> My Events </p>
+				<i class="material-icons add">add</i>
+			</div>
+			
+			<div class="dropdown"> 
+				<div class="element">
+					<i class='fas fa-users' id='light-green'></i>
+					<p> Christmas Party! </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users' id='light-green'></i>
+					<p> Cleaning the Park </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users' id='light-green'></i>
+					<p> Language Exchange Evening </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users' id='light-green'></i>
+					<p> Thanksgiving dinner </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users' id='light-green'></i>
+					<p> Bookclub meeting </p>
+				</div>
+				<div class="element" id="grey">
+					<i class='fas fa-search'></i>
+					<p> Search Events </p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="bottom-group">
+			<div class="element">
+				<i class='fas fa-archive' id="grey"></i>
+				<p> My archive </p>
+			</div>
+			<div class="element">
+				<i class='fas fa-history' id="grey"></i>
+				<p> My activity </p>
+			</div>
+			<div class="element">
+				<i class='fas fa-trash-alt' id="grey"></i>
+				<p> Trash </p>
+			</div>
+		</div>
+	</div>
+	<!-- CONTENT -->
+	<div class="content">
+		<div class="events-header">
+			<h1> Events </h1>
+			<i class="material-icons">menu</i>
+			<i class="material-icons">add</i>
+			<div class="search-bar">
+				<i class='fas fa-search'></i>
+				<p>Search events</p>
+			</div>
+		</div>
+		<div class="event-category"> 
+			<p> My events </p>
+			<div class="arrows" id="grey">
+				<i class="material-icons">keyboard_arrow_right</i>
+				<i class="material-icons">keyboard_arrow_left</i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="event">
+				<img src="images/xmas.jpg" alt="Logo">
+				<div class="title"> Christmas Party! </div>
+				<p id="light-green"> wed, 25 dec 2019 - 11pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> ocho y medio </p>
+				</div> 
+				<div class="attending">
+					Attending
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/park_clean.jpg" alt="Logo">
+				<div class="title"> Cleaning the park 🌲 </div>
+				<p id="light-green"> tue, 17 dec 2019 - 10am </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> El Retiro </p>
+				</div> 
+				<div class="attending">
+					Attending
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/language_exchange.jpg" alt="Logo">
+				<div class="title"> Language exchange evening </div>
+				<p id="light-green"> thu, 5 dec 2019 - 6pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> La Fábrica Pub </p>
+				</div> 
+				<div class="attending">
+					Attending
+				</div>
+			</div>
+		</div>
+		<div class="event-category"> 
+			<p> Based on my interests </p>
+			<div class="arrows" id="grey">
+				<i class="material-icons">keyboard_arrow_right</i>
+				<i class="material-icons">keyboard_arrow_left</i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="event">
+				<img src="images/book_presentation.jpg" alt="Logo">
+				<div class="title"> Book presentation </div>
+				<p id="light-green"> tue, 3 dec 2019 - 6pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> La Central </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/german_market.jpg" alt="Logo">
+				<div class="title"> German Ghristmas Market </div>
+				<p id="light-green"> fri, 20 dec 2019 - 5pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Cine Doré </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/prado_museum.jpg" alt="Logo">
+				<div class="title"> Visit to Prado Museum </div>
+				<p id="light-green"> thu, 12 dec 2019 - 11am </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Prado Museum </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+		</div>
+		<div class="event-category"> 
+			<p> Near me </p>
+			<div class="arrows" id="grey">
+				<i class="material-icons">keyboard_arrow_right</i>
+				<i class="material-icons">keyboard_arrow_left</i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="event">
+				<img src="images/data_analysis.jpg" alt="Logo">
+				<div class="title"> Intro to Data Analysis </div>
+				<p id="light-green"> wed, 25 dec 2019 - 11pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Ironhack </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/madrid.jpg" alt="Logo">
+				<div class="title"> Madrid Origins: Guided Tour </div>
+				<p id="light-green"> wed, 11 dec 2019 - 12pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Plaza Mayor </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/photo.jpg" alt="Logo">
+				<div class="title"> Natural Light Portraits Class </div>
+				<p id="light-green"> sun, 8 dec 2019 - 12pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> O'Donnell </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+		</div>
+		<div class="event-category"> 
+			<p> My friends' picks </p>
+			<div class="arrows" id="grey">
+				<i class="material-icons">keyboard_arrow_right</i>
+				<i class="material-icons">keyboard_arrow_left</i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="event">
+				<img src="images/david_bowie.jpg" alt="Logo">
+				<div class="title"> David Bowie Tribute </div>
+				<p id="light-green"> wed, 25 dec 2019 - 11pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Sala Clamores </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/brunch.jpg" alt="Logo">
+				<div class="title"> Sunday Brunch </div>
+				<p id="light-green"> wed, 25 dec 2019 - 11pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Adorado Bar </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+			<div class="event">
+				<img src="images/open_mic.jpg" alt="Logo">
+				<div class="title"> Songwriter Open Mic </div>
+				<p id="light-green"> wed, 25 dec 2019 - 11pm </p>
+				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
+				<div class="location"> 
+					<i class="material-icons">place</i>
+					<p> Tje Village Room </p>
+				</div> 
+				<div class="attend">
+					Attend
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
