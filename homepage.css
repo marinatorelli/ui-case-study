@@ -1,0 +1,192 @@
+body {
+	margin: 0;
+	background-color: #52BE80;
+	font-family: Roboto;
+}
+
+/* Clear floats after the columns */
+.top-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+header {
+	box-sizing: border-box;
+	font-family: Advent Pro;
+	font-weight: bold;
+	color: white;
+	width: 20%;
+	float: left;
+	padding: 20px;
+	display: flex;
+}
+
+header img {
+	height: 60px;
+	width: 60px;
+}
+
+header h1 {
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+nav {
+	float: left;
+	margin-top: 40px;
+}
+
+/* Navigation link */
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+	margin: 30px;
+}
+
+a:hover {
+	color: #f2f2f2;
+}
+
+#login {
+	margin-top: 40px;
+	margin-right: 0;
+	float: right;
+}
+
+.button {
+	margin-top: 40px;
+	float: right;
+}
+
+.button a:link, .button a:visited {
+	text-align: center;
+	color: black;
+	background-color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.register a:hover {
+	background-color: #f2f2f2;
+}
+
+#first-photo {
+	margin-top: 160px;
+	box-sizing: border-box;
+	padding-left: 2%;
+	float: left;
+	width: 45%;
+}
+
+.slogan h1 {
+	float: left;
+	margin: 0;
+	width: 55%;
+	text-align: right;
+	font-size: 5.7em;
+	padding: 5px 70px;
+	box-sizing: border-box;
+}
+
+.slogan:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#white {
+	color: white;
+}
+
+.get-started {
+	margin: 60px 8%;
+	font-size: 2em;
+	margin
+}
+
+.get-started a:link, .get-started a:visited {
+	padding: 15px 30px;
+}
+
+.description {
+	float: left;
+	width: 50%;
+	position: relative;
+	display: inline-block;
+	background-color: white;
+	padding-top: 40px;
+}
+
+.description h2 {
+	position: absolute;
+	left: 20%;
+	top: 20px;
+	width: 30%;
+}
+
+.description img {
+	float: right;
+	max-height: 200px;
+	padding: 40px 150px 40px 40px;
+}
+
+#img-rectangular {
+	padding: 40px;
+}
+
+#green {
+	color: #52BE80;
+}
+
+hr {
+	background-color: white;
+	margin: 0;
+}
+
+footer {
+	clear: both;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	background-color: white;
+	display: flex;
+}
+
+footer a:link, footer a:visited {
+	float: left;
+	width: 100%;
+	margin: 0;
+	color: black;
+	padding: 5px;
+}
+
+footer img {
+	width: 55px;
+	height: 55px;
+	float: left;
+}
+
+.company {
+	padding-left: 20px;
+	width: 50%;
+	color: #52BE80;
+}
+
+.company h1 {
+	float: left;
+	margin: 20px 10px 0;
+}
+
+.company p {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+	color: black;
+}
+
+.column {
+	width: 15%;
+	font-family: 'Open Sans';
+	font-size: 0.5em;
+}

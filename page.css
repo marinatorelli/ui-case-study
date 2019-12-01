@@ -1,0 +1,182 @@
+body {
+	margin: 0;
+	font-family: 'Open Sans';
+}
+
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+header {
+	color: white;
+	background: #52BE80;
+	padding: 10px;
+	margin: 0;
+}
+
+header h1 {
+	float: left;
+	font-family: Advent Pro;
+	font-size: 1.75em;
+	margin: 0;
+	padding-left: 10px;
+}
+
+header img {
+	float: left;
+	width: 35px;
+	height: 35px;
+	margin-left: 5px;
+}
+
+header i {
+	margin-top: 5px;
+	float: right;
+	padding: 0 5px;
+}
+
+/* SIDE BAR */ 
+.side-bar {
+	width: 20%;
+	height: 80%;
+	background: #F5F5F5;
+	display: flex;
+	flex-direction: column;
+	left: 0px;
+	float: left;
+}
+
+.side-header {
+	width: 100%;
+	display: flex;
+	float: left;
+}
+
+.logo {
+	background-color: #c4c4c4;
+	color: white;
+	width: 35px;
+	height: 35px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 5px;
+	margin: 12px;
+}
+
+.side-header h1 {
+	font-size: 1.3em;
+	margin-top: 20px;
+}
+
+.logo h1 {
+	margin-top: 3px;
+}
+
+.side-header i {
+	font-size: 1.25em;
+	color: #C4C4C4;
+	margin: 26px;
+}
+
+.top-group {
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.shortcut {
+	padding: 6px;
+	margin-left: 30px;
+}
+
+.shortcut p {
+	margin: 0;
+	padding-left: 10px;
+}
+
+.shortcut p, i {display: inline-block;}
+
+hr {
+	width: 100%;
+	box-sizing: border-box;
+	border: 0.7px solid #C4C4C4;
+	margin-top: 22px;
+}
+
+.side-bar-group {
+	padding-left: 28px;
+	width: 100;
+}
+
+.group-header, .dropdown, .bottom-group {
+	width: 100%;
+	float: left;
+}
+
+.side-bar-group i {
+	padding-top: 7px;
+	color:  #C4C4C4;
+}
+
+.arrow-down {
+	float: left;
+	font-size: 2em;
+	cursor: pointer;
+}
+.add {
+	float: right;
+	margin-top: 5px;
+	margin-right: 20px;
+}
+
+.side-bar-group p {
+	float: left;
+	margin: 0;
+	padding-top: 12px;
+	padding-left: 10px;
+}
+
+.dropdown p {
+	font-size: 0.75em;
+	margin-left: 5px;
+}
+
+.dropdown i {
+	margin-top: 4px;
+	margin-left: 8px;
+}
+
+.element {
+	height: 30px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+}
+
+.element p {padding-left: 14px;}
+
+#purple {color: #9D8CB7;}
+#dark-blue {color: #124E78;}
+#red {color: #F96F5D;}
+#dark-green {color: #38726C;}
+#mustard {color: #FF9F1C;}
+#grey {color: #C4C4C4;}
+#light-green {color: #52BE80;}
+#dark-grey {color: #696969;}
+
+.bottom-group {
+	padding: 20px;
+}
+
+.bottom-group i {
+	margin-left: 15px;
+}
+
+.hide {
+	display: none;
+}
