@@ -28,7 +28,7 @@
 			<input type="text" placeholder="Email or username" id="user" autocomplete="off" required>
 			<input type="submit" class="logbtn" value="Invite"/>
 		</div>
-		<img src=images/drawing1.png>
+		<img src="images/drawing1.png">
 		<div class= title><p>Organise work together</p></div>
 		<div class = description>Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
 		<div class = howto>
@@ -195,7 +195,13 @@
 				<i class="fas fa-plus"></i>
 				<i class="far fa-comment-alt"></i>
 				<i class="fas fa-user-plus"></i>
-				<i class="fas fa-bars"></i>
+				<i class="fas fa-bars" onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
+		</div>
+		
+		<div class="general projects-menu">
+			<div class="project-option"> <div class="menu-icon"><i class="material-icons">create_new_folder</i></div> Add section </div>
+			<div class="project-option"> <div class="menu-icon"><i class="fa fa-edit"></i></div> Rename </div>
+			<div class="project-option"> <div class="menu-icon"><i class="material-icons">star_border</i></div> Add to favorites </div>
 		</div>
 
 		<!-- CONTENTS -->
@@ -204,7 +210,14 @@
 				<div class="column-header"> 
 					<p> Not Started </p>
 					<i class="fas fa-plus"></i>
-					<i class='fas fa-ellipsis-h'></i>
+					<i class='fas fa-ellipsis-h' onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
+				</div>
+				<div class="column-menu projects-menu">
+					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
+					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-archive'></i></div> Archive </div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
@@ -212,7 +225,7 @@
 						<p> Write sequential code </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Download new version from Github and keep writing the remaining functions.
+					<p class="task-description" id="dark-grey"> Download new version from Github and keep writing the remaining functions.
 						Upload it all to Github. </p>
 					<div class="tags">
 						<div class = "tag mustard_background">
@@ -227,7 +240,7 @@
 						<p> Write parallel code </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Pick 5 functions and rewrite them in parallel. 
+					<p class="task-description" id="dark-grey"> Pick 5 functions and rewrite them in parallel. 
 							Add comments and upload it to the shared Github project. </p>
 					<div class="tags">
 						<div class = "tag mustard_background">
@@ -242,7 +255,7 @@
 						<p> Write report PDF </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Write introduction and explain my functions.
+					<p class="task-description" id="dark-grey"> Write introduction and explain my functions.
 							 Write conclusions from the output. </p>
 					<div class="tags">
 						<div class = "tag mustard_background">
@@ -256,7 +269,14 @@
 				<div class="column-header"> 
 					<p> In Progress </p>
 					<i class="fas fa-plus left"></i>
-					<i class='fas fa-ellipsis-h'></i>
+					<i class='fas fa-ellipsis-h' onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
+				</div>
+				<div class="column-menu projects-menu">
+					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
+					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-archive'></i></div> Archive </div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
@@ -264,7 +284,7 @@
 						<p> Chapter 4 notes </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Write notes for next week's exam </p>
+					<p class="task-description" id="dark-grey"> Write notes for next week's exam </p>
 					<div class="tags">
 						<div class = "tag purple_background">
 							<i class='fas fa-tag'></i>
@@ -278,7 +298,7 @@
 						<p> Heuristics notes </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Write notes from the last two weeks </p>
+					<p class="task-description" id="dark-grey"> Write notes from the last two weeks </p>
 					<div class="tags">
 						<div class = "tag purple_background">
 							<i class='fas fa-tag'></i>
@@ -291,7 +311,14 @@
 				<div class="column-header"> 
 					<p> Completed </p>
 					<i class="fas fa-plus left"></i>
-					<i class='fas fa-ellipsis-h'></i>
+					<i class='fas fa-ellipsis-h' onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
+				</div>
+				<div class="column-menu projects-menu">
+					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
+					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-archive'></i></div> Archive </div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
@@ -299,7 +326,7 @@
 						<p> Lab 1: Quiz </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Complete the lab 1 assigment and do the quiz on Aula Global </p>
+					<p class="task-description" id="dark-grey"> Complete the lab 1 assigment and do the quiz on Aula Global </p>
 					<div class="tags">
 						<div class = "tag red_background">
 							<i class='fas fa-tag'></i>
@@ -313,7 +340,7 @@
 						<p> Theory Module 1: Quiz </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
-					<p class="description" id="dark-grey"> Review notes and do the quiz on Aula Global </p>
+					<p class="task-description" id="dark-grey"> Review notes and do the quiz on Aula Global </p>
 					<div class="tags">
 						<div class = "tag red_background">
 							<i class='fas fa-tag'></i>

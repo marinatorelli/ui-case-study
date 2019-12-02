@@ -5,7 +5,7 @@ i {
 
 /*share pop-up*/
 
-.share-popup{
+.share-popup {
 	display: none; /*Hidden by default*/
 	position:fixed;/*Stay in place*/
 	z-index:1;/*Sit on top*/
@@ -18,13 +18,13 @@ i {
 	top: 7%;
 	bottom: 7%;
 }
-.share-popup .topmenu{
+.share-popup .topmenu {
 	line-height: 24px;
 	display: flex;
 	align-items: center;
 	text-align: center;
 }
-.share-popup .topmenu h1{
+.share-popup .topmenu h1 {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: normal;
@@ -34,23 +34,23 @@ i {
 	padding-top: 5%;
 	color: #696969;
 }
-.topmenu .fa-times{
+.topmenu .fa-times {
 	color: #696969;
 	position: absolute;
 	top: 5%;
 	right: 8%;
 	cursor: pointer;
 }
-.share-popup hr{
+.share-popup hr {
 	margin: 5% 5% 8% 5%;
 	width: 90%;
 }
-.share-popup img{
+.share-popup img {
 	margin: 5% 10% 0% 10%;
 	width: 80%;
 	height: auto;
 }
-.share-popup .title{
+.share-popup .title {
 	width: 100%;
 	font-family: "Open Sans";
 	font-size: 25px;
@@ -58,7 +58,7 @@ i {
 	text-align: center;
 	margin:0;
 }
-.share-popup .description{
+.share-popup .description {
 	width: 80%;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -71,11 +71,11 @@ i {
 	margin:0;
 	color: #696969;
 }
-.share-popup i{
+.share-popup i { 
 	color: #52BE80;
 	display: inline-block;
 }
-.share-popup .howto{
+.share-popup .howto {
 	width: 100%;
 	padding-top: 4%;
 	padding-bottom: 4%;
@@ -87,12 +87,12 @@ i {
 	color: #52BE80;
 	cursor: pointer;
 }
-.form{
+.form {
 	background-color: white;
 	margin: 0;
 	width: 100%;
 }
-#user{
+#user {
 	display: inline-block;
 	line-height: 20px;
 	width: 50%;
@@ -103,7 +103,7 @@ i {
 	box-sizing: border-box;
 	border-radius: 3px;
 }
-.logbtn{
+.logbtn {
 	display: inline-block;
 	line-height: 30px;
     width: 26%;
@@ -116,7 +116,7 @@ i {
 	transition: .5s;
 	margin-right: 10%;
 }
-.logbtn:hover{
+.logbtn:hover {
     
 }
 
@@ -127,6 +127,7 @@ i {
 
 .content i {
 	color: #c4c4c4;
+	cursor: pointer;
 }
 
 .projects-header {
@@ -141,7 +142,7 @@ i {
 	display: inline-block;
 }
 
-.projects-header i{
+.projects-header i {
 	font-size: 20px;
 	line-height: 59px;
 	color: #C4C4C4;
@@ -149,6 +150,46 @@ i {
 	float: right;
 	margin-top: 2%;
 }
+
+.projects-menu {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	background-color: white;
+	padding: 1%;
+	z-index: 1;
+}
+
+.general {
+	width: 250px;
+	left: 72%;
+	top: 14%;
+}
+
+.column-menu {
+	width: 180px;
+	top: 12%;
+	right: 0;
+}
+
+.project-option {
+	display: flex;
+	align-items: center;
+	padding: 2%;
+}
+
+.project-option:hover {
+	cursor: pointer;
+	background-color: #f2f2f2
+}
+
+.menu-icon {
+	width: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.show {display:flex;}
 
 /* TASK CATEGORIES */
 .columns-container {
@@ -166,6 +207,7 @@ i {
 	flex-direction: column;
 	padding: 2% 1%;
 	box-sizing: border-box;
+	position: relative;
 }
 
 .column-header {
@@ -203,7 +245,7 @@ i {
 	padding-left: 3%;
 }
 
-.description {
+.task-description {
 	margin: 0;
 	padding: 6% 5% 6% 5%;
 	font-size: 0.75em;
