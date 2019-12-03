@@ -1,0 +1,182 @@
+.content {
+	width: 80%;
+	float: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.events-header {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 2% 0 4%;
+}
+
+.events-header h1 {
+	float: left;
+}
+
+.events-header i {
+	float: right;
+	color: #c4c4c4;
+	font-size: 2em;
+	margin: 28px 4px 0;
+}
+
+.search-bar {
+	width: 275px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #52BE80;
+	float: right;
+	color: white;
+	margin: 28px 15px 0;
+}
+
+.search-bar i{
+	float: left;
+	margin: 0;
+}
+#search{
+	float:left;
+	background-color: #52BE80;
+	border: none;
+	line-height: 20px;
+}
+::placeholder { 
+	color: white;
+	opacity: 1; /* Firefox */
+}
+*:focus {
+	outline: none;
+	color: white;
+}
+input:focus::placeholder{
+	color:transparent;
+	transition: 0.2s;
+}
+
+.search-bar i {
+	color: white;
+	font-size: 0.9em;
+	margin: 5px 10px 0;
+}
+
+.event-category {
+	width: 100%;
+}
+
+.event-category p {
+	width: 50%;
+	float: left;
+	font-size: 1.4em;
+	margin: 0;
+	padding-left: 7%;
+}
+
+.event-category i {
+	float: right;
+}
+
+.arrows {
+	margin-right: 7%;
+	color: #C4C4C4;
+	cursor: pointer;
+}
+
+#arrw:hover{
+	color: #696969;
+}
+
+
+.row {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	margin: 10px 0 30px;
+	padding: 0 50px;
+}
+
+.event {
+	transition: box-shadow .3s;
+	width: 28%;
+	height: 360px;
+	margin: auto;
+	border: 3px solid #F1F1F1;
+	border-radius: 6px;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+.event:hover {
+	box-shadow: 0 0 8px #C4C4C4; 
+}
+
+.title {
+	margin: 8px 0 12px;
+	font-size: 1.6em;
+	padding-left: 15px;
+}
+
+.event p {
+	margin: 5% 0 0;
+	padding-left: 30px;
+	line-height: 15px;
+}
+
+.event img {
+	width: 100%;
+	height: 180px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.event i {
+	float: left;
+	color: #52BE80;
+}
+
+.location {
+	margin-top: 10px;
+	padding: 10px 0 10px 25px;
+	float: left;
+	cursor: pointer;
+}
+
+.attending, .attend {
+	float: right;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 18px 20px 10px 0;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.attending {
+	color: white;
+	background-color: #52BE80;
+}
+.attending span.cancel-att{
+	display:none;
+}
+.attending:hover span.yes-att{
+	display:none;
+}
+.attending:hover span.cancel-att{
+	display:block;
+}
+
+.attending:hover{
+	color: white;
+	background-color: tomato;
+}
+
+.attend {
+	border: 1px solid #52BE80;
+	color: #52BE80;
+}
+
+.attend:hover{
+	color: white;
+	background-color: #52BE80;
+	border: 1px solid #52BE80;
+}
