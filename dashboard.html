@@ -19,20 +19,22 @@
 
 <body>
 	<!-- SHARE MODAL -->
-	<div class = share-popup id="share-popup">
-		<div class = topmenu>
-			<h1>Share options</h1><i class="fas fa-times" onclick="closeModal(this)"></i>
-		</div>
-		<hr>
-		<div class = form>
-			<input type="text" placeholder="Email or username" id="user" autocomplete="off" required>
-			<input type="submit" class="logbtn" value="Invite"/>
-		</div>
-		<img src="images/drawing1.png">
-		<div class= title><p>Organise work together</p></div>
-		<div class = description>Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
-		<div class = howto>
-			<i class="far fa-question-circle"></i>&nbsp How to colaborate with others?
+	<div class = "popup" id="share">
+		<div class = "share-popup">
+			<div class = "topmenu">
+				<h1>Share options</h1><i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode.parentNode)></i>
+			</div>
+			<hr>
+			<div class = form>
+				<input type="text" placeholder="Email or username" id="user" autocomplete="off" required>
+				<input type="submit" class="logbtn" value="Invite"/>
+			</div>
+			<img src="images/drawing1.png">
+			<div class= title><p>Organise work together</p></div>
+			<div class = "share-description">Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
+			<div class = "howto">
+				<i class="far fa-question-circle"></i>&nbsp How to colaborate with others?
+			</div>
 		</div>
 	</div>
 
@@ -98,10 +100,6 @@
 					<i class='fas fa-circle' id="mustard"></i>
 					<p> Heuristics & Optimization </p>
 				</div>
-				<div class="element" id="grey">
-					<i class="material-icons">add</i>
-					<p> Add Project </p>
-				</div>
 			</div>
 		</div>
 		<hr>
@@ -128,10 +126,6 @@
 				<div class="element">
 					<i class='fas fa-tag' id="red"></i>
 					<p> Exam </p>
-				</div>
-				<div class="element" id="grey">
-					<i class="material-icons">add</i>
-					<p> Add Label </p>
 				</div>
 			</div>
 		</div>	
@@ -194,7 +188,7 @@
 				<h1>Computer Architecture</h1>
 				<i class="fas fa-plus"></i>
 				<i class="far fa-comment-alt"></i>
-				<i class="fas fa-user-plus"></i>
+				<i class="fas fa-user-plus" onclick = show_popup("share")></i>
 				<i class="fas fa-bars" onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 		</div>
 		

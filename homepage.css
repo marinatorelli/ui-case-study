@@ -13,7 +13,7 @@ body {
 
 header {
 	box-sizing: border-box;
-	font-family: Advent Pro;
+	font-family: "Advent Pro";
 	font-weight: bold;
 	color: white;
 	width: 20%;
@@ -66,26 +66,26 @@ a:hover {
 	padding: 10px 20px;
 	border-radius: 5px;
 }
-
-.register a:hover {
-	background-color: #f2f2f2;
+.button:hover a {
+	color: #52BE80;
 }
 
 #first-photo {
-	margin-top: 160px;
+	margin-top: 200px;
+	margin-bottom: 60px;
 	box-sizing: border-box;
-	padding-left: 2%;
+	padding-left: 7%;
 	float: left;
-	width: 45%;
+	width: 48%;
 }
 
 .slogan h1 {
 	float: left;
 	margin: 0;
-	width: 55%;
+	width: 52%;
 	text-align: right;
-	font-size: 5.7em;
-	padding: 5px 70px;
+	font-size: 120px;
+	padding: 5px 8% 0 0;
 	box-sizing: border-box;
 }
 
@@ -102,7 +102,6 @@ a:hover {
 .get-started {
 	margin: 60px 8%;
 	font-size: 2em;
-	margin
 }
 
 .get-started a:link, .get-started a:visited {
@@ -115,7 +114,7 @@ a:hover {
 	position: relative;
 	display: inline-block;
 	background-color: white;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 .description h2 {
@@ -128,10 +127,6 @@ a:hover {
 .description img {
 	float: right;
 	max-height: 200px;
-	padding: 40px 150px 40px 40px;
-}
-
-#img-rectangular {
 	padding: 40px;
 }
 
@@ -168,8 +163,8 @@ footer img {
 }
 
 .company {
-	padding-left: 20px;
-	width: 50%;
+	padding-left: 50px;
+	width: 35%;
 	color: #52BE80;
 }
 
@@ -186,7 +181,12 @@ footer img {
 }
 
 .column {
-	width: 15%;
+	width: 18%;
 	font-family: 'Open Sans';
-	font-size: 0.5em;
+	font-size: 13px;
+	margin-bottom: 44px;
+}
+.column a{
+	font-family: 'Open Sans';
+	font-size: 12px;
 }

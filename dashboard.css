@@ -4,9 +4,7 @@ i {
 }
 
 /*share pop-up*/
-
 .share-popup {
-	display: none; /*Hidden by default*/
 	position:fixed;/*Stay in place*/
 	z-index:1;/*Sit on top*/
 	width: 30%;
@@ -58,7 +56,7 @@ i {
 	text-align: center;
 	margin:0;
 }
-.share-popup .description {
+.share-popup .share-description {
 	width: 80%;
 	padding-left: 10%;
 	padding-right: 10%;

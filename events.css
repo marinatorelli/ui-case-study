@@ -32,9 +32,27 @@
 	margin: 28px 15px 0;
 }
 
-.search-bar i, .search-bar p {
+.search-bar i{
 	float: left;
 	margin: 0;
+}
+#search{
+	float:left;
+	background-color: #52BE80;
+	border: none;
+	line-height: 20px;
+}
+::placeholder { 
+	color: white;
+	opacity: 1; /* Firefox */
+}
+*:focus {
+	outline: none;
+	color: white;
+}
+input:focus::placeholder{
+	color:transparent;
+	transition: 0.2s;
 }
 
 .search-bar i {
@@ -61,7 +79,14 @@
 
 .arrows {
 	margin-right: 7%;
+	color: #C4C4C4;
+	cursor: pointer;
 }
+
+#arrw:hover{
+	color: #696969;
+}
+
 
 .row {
 	width: 100%;
@@ -72,29 +97,36 @@
 }
 
 .event {
+	transition: box-shadow .3s;
 	width: 28%;
+	height: 360px;
 	margin: auto;
-	border: 3px solid #F5F5F5;
+	border: 3px solid #F1F1F1;
 	border-radius: 6px;
 	font-size: 0.8em;
+	cursor: pointer;
+}
+.event:hover {
+	box-shadow: 0 0 8px #C4C4C4; 
 }
 
 .title {
 	margin: 8px 0 12px;
-	font-size: 1.2em;
+	font-size: 1.6em;
 	padding-left: 15px;
 }
 
 .event p {
-	margin: 4px 0 0;
+	margin: 5% 0 0;
 	padding-left: 30px;
 	line-height: 15px;
 }
 
 .event img {
 	width: 100%;
-	height: 150px;
-	border-radius: 6px;
+	height: 180px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .event i {
@@ -106,6 +138,7 @@
 	margin-top: 10px;
 	padding: 10px 0 10px 25px;
 	float: left;
+	cursor: pointer;
 }
 
 .attending, .attend {
@@ -114,14 +147,36 @@
 	display: inline-block;
 	padding: 5px 10px;
 	margin: 18px 20px 10px 0;
+	cursor: pointer;
+	transition: 0.2s;
 }
 
 .attending {
 	color: white;
 	background-color: #52BE80;
 }
+.attending span.cancel-att{
+	display:none;
+}
+.attending:hover span.yes-att{
+	display:none;
+}
+.attending:hover span.cancel-att{
+	display:block;
+}
+
+.attending:hover{
+	color: white;
+	background-color: tomato;
+}
 
 .attend {
 	border: 1px solid #52BE80;
 	color: #52BE80;
+}
+
+.attend:hover{
+	color: white;
+	background-color: #52BE80;
+	border: 1px solid #52BE80;
 }

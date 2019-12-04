@@ -18,7 +18,7 @@ header {
 
 header h1 {
 	float: left;
-	font-family: Advent Pro;
+	font-family: 'Delius Unicase', cursive;
 	font-size: 1.75em;
 	margin: 0;
 	padding-left: 10px;
@@ -38,6 +38,8 @@ header i {
 }
 
 /* SIDE BAR */ 
+.container{
+}
 .side-bar {
 	width: 20%;
 	height: 80%;
@@ -46,6 +48,10 @@ header i {
 	flex-direction: column;
 	left: 0px;
 	float: left;
+	position:-webkit-sticky;
+	position: sticky;
+	position:sticky;
+	top:0;
 }
 
 .side-header {
@@ -97,7 +103,10 @@ header i {
 	padding-left: 10px;
 }
 
-.shortcut p, i {display: inline-block;}
+.shortcut p, i {
+	display: inline-block;
+	cursor: pointer;
+}
 
 hr {
 	width: 100%;
@@ -142,11 +151,13 @@ hr {
 .dropdown p {
 	font-size: 0.75em;
 	margin-left: 5px;
+	cursor: pointer;
 }
 
 .dropdown i {
 	margin-top: 4px;
 	margin-left: 8px;
+	cursor: pointer;
 }
 
 .element {
@@ -172,11 +183,26 @@ hr {
 .bottom-group {
 	padding: 20px;
 }
-
 .bottom-group i {
 	margin-left: 15px;
+	cursor: pointer;
+}
+.bottom-group .element p{
+	color: #696969;
+	cursor: pointer;
 }
 
 .hide {
 	display: none;
+}
+
+.popup {
+	display: none; /* Not shown until share button of a card is clicked */
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 1; 
+	width: 100%; 
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
 }
