@@ -15,7 +15,7 @@
 	<!-- Java Script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src = "Events.js"></script>
+	<script src = "functions.js"></script>
 </head>
 
 <body>
@@ -189,7 +189,7 @@
 				<i class="material-icons" id="arrw">keyboard_arrow_left</i>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id = "my-events">
 			<div class="event">
 				<img src="images/xmas.jpg" alt="Logo">
 				<div class="title"> Christmas Party! </div>
@@ -199,7 +199,7 @@
 					<i class="material-icons">place</i>
 					<p> ocho y medio </p>
 				</div> 
-				<div class="attending">
+				<div class="attending" onclick = cancel_attending(this.parentNode)>
 					<span class="yes-att">Attending</span><span class="cancel-att">Cancel</span>
 				</div>
 			</div>
@@ -212,7 +212,7 @@
 					<i class="material-icons">place</i>
 					<p> El Retiro </p>
 				</div> 
-				<div class="attending">
+				<div class="attending" onclick = cancel_attending(this.parentNode)>
 					<span class="yes-att">Attending</span><span class="cancel-att">Cancel</span>
 				</div>
 			</div>
@@ -225,7 +225,7 @@
 					<i class="material-icons">place</i>
 					<p> La Fábrica Pub </p>
 				</div> 
-				<div class="attending">
+				<div class="attending" onclick = cancel_attending(this.parentNode)>
 					<span class="yes-att">Attending</span><span class="cancel-att">Cancel</span>
 				</div>
 			</div>
@@ -247,7 +247,7 @@
 					<i class="material-icons">place</i>
 					<p> La Central </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					<span>Attend</span>
 				</div>
 			</div>
@@ -260,7 +260,7 @@
 					<i class="material-icons">place</i>
 					<p> Cine Doré </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -273,7 +273,7 @@
 					<i class="material-icons">place</i>
 					<p> Prado Museum </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -295,7 +295,7 @@
 					<i class="material-icons">place</i>
 					<p> Ironhack </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -308,7 +308,7 @@
 					<i class="material-icons">place</i>
 					<p> Plaza Mayor </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -321,7 +321,7 @@
 					<i class="material-icons">place</i>
 					<p> O'Donnell </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -343,7 +343,7 @@
 					<i class="material-icons">place</i>
 					<p> Sala Clamores </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -356,7 +356,7 @@
 					<i class="material-icons">place</i>
 					<p> Adorado Bar </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>
@@ -367,9 +367,9 @@
 				<p id="grey"> Join us to celebrate Christmas with some drinks and good music!! </p>
 				<div class="location"> 
 					<i class="material-icons">place</i>
-					<p> The Village Room </p>
+					<p> The Village </p>
 				</div> 
-				<div class="attend">
+				<div class="attend" onclick = attend(this.parentNode)>
 					Attend
 				</div>
 			</div>

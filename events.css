@@ -92,15 +92,17 @@ input:focus::placeholder{
 	width: 100%;
 	box-sizing: border-box;
 	display: flex;
+	justify-content: flex-start;
 	margin: 10px 0 30px;
 	padding: 0 50px;
+	overflow: hidden;
 }
 
 .event {
 	transition: box-shadow .3s;
-	width: 28%;
+	min-width: 28%;
 	height: 360px;
-	margin: auto;
+	margin: 2%;
 	border: 3px solid #F1F1F1;
 	border-radius: 6px;
 	font-size: 0.8em;
