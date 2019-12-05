@@ -40,7 +40,7 @@ i {
 	position:fixed;/*Stay in place*/
 	z-index:1;/*Sit on top*/
 	width: 50%;
-	height: 90%;
+	height: 100%;
 	background-color: white;
 	position: absolute;
 	left: 25%;
