@@ -19,24 +19,52 @@
 
 <body>
 	<!-- SHARE MODAL -->
-	<div class = "popup" id="share">
-		<div class = "share-popup">
-			<div class = "topmenu">
-				<h1>Share options</h1><i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode.parentNode)></i>
-			</div>
-			<hr>
-			<div class = form>
-				<input type="text" placeholder="Email or username" id="user" autocomplete="off" required>
-				<input type="submit" class="logbtn" value="Invite"/>
-			</div>
-			<img src="images/drawing1.png">
-			<div class= title><p>Organise work together</p></div>
-			<div class = "share-description">Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
-			<div class = "howto">
-				<i class="far fa-question-circle"></i>&nbsp How to colaborate with others?
-			</div>
+	<div class = share-popup id="share-popup">
+		<div class = topmenu>
+			<h1>Share options</h1><i class="fas fa-times" onclick="closeModal(this)"></i>
+		</div>
+		<hr>
+		<div class = form>
+			<input type="text" placeholder="Email or username" id="user" autocomplete="off" required>
+			<input type="submit" class="logbtn" value="Invite"/>
+		</div>
+		<img src="images/drawing1.png">
+		<div class= title><p>Organise work together</p></div>
+		<div class = description>Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
+		<div class = howto>
+			<i class="far fa-question-circle"></i>&nbsp How to colaborate with others?
 		</div>
 	</div>
+	
+	<!--Creating new columns modal-->
+	<div class = "create-popup" id="create-popup">
+		<div class="modal-header">
+			<h1>Untiteled</h1><i class="fas fa-times" onclick="closeModalcreate(this)"></i>
+			<div class="icons">
+				<i class="far fa-star"></i>
+				<i class="fas fa-ellipsis-h"></i>
+			</div>
+		</div>
+		<hr>
+		<div class="modal-menu">
+			<i class="fas fa-redo"><p>Created</p><button id="datebutton" onclick="showdate(this)">Date</button><p id="date"> </p></i></br> 
+			<i class="fas fa-redo"><p>Last Update</p><button id="datebutton"  onclick="showdate2(this)">Date</button><p id="date2"></p></i></br>
+			<i class="fas fa-users"><p>Collaborators</p><p id="text2">Empty</p></i></br>
+			<i class="fas fa-check-circle"><p>Status</p><p id="text2">Empty</p></i></br>
+			<i class="fas fa-calendar-day"><p>Submission</p><p id="text2">Empty</p></i></br>
+			<i class="fas fa-bell"><p id="text">Reminders</p><p id="text2">Empty</p></i></br>
+			<i class="fas fa-plus"><p id="text">Add a property</p><p id="text2">Empty</p></i>
+			<hr>
+			<p id="comment"> Add a comment </p>
+			<hr>
+			<p> Description </p>
+		</div>
+		<div class="modal-footer">
+			<button onclick="closeModalcreate(this)"> Create </button>
+		</div>
+		
+	</div>
+	
 
 	<!-- HEADER -->
 	<header>
@@ -100,6 +128,10 @@
 					<i class='fas fa-circle' id="mustard"></i>
 					<p> Heuristics & Optimization </p>
 				</div>
+				<div class="element" id="grey">
+					<i class="material-icons">add</i>
+					<p> Add Project </p>
+				</div>
 			</div>
 		</div>
 		<hr>
@@ -126,6 +158,10 @@
 				<div class="element">
 					<i class='fas fa-tag' id="red"></i>
 					<p> Exam </p>
+				</div>
+				<div class="element" id="grey">
+					<i class="material-icons">add</i>
+					<p> Add Label </p>
 				</div>
 			</div>
 		</div>	
@@ -186,9 +222,9 @@
 		<!-- TITLE AND OPTIONS-->
 		<div class="projects-header">
 				<h1>Computer Architecture</h1>
-				<i class="fas fa-plus"></i>
+				<i class="fas fa-plus"  onclick= create(this) ></i>
 				<i class="far fa-comment-alt"></i>
-				<i class="fas fa-user-plus" onclick = show_popup("share")></i>
+				<i class="fas fa-user-plus"></i>
 				<i class="fas fa-bars" onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 		</div>
 		
@@ -210,12 +246,12 @@
 					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
 					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
-					<div class="project-option" onclick = closeElement(this.parentNode.parentNode)> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-archive'></i></div> Archive </div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_unchecked </i>
+						<i class="material-icons" id="grey"> radio_button_unchecked </i>
 						<p> Write sequential code </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -226,11 +262,12 @@
 							<i class='fas fa-tag'></i>
 							<p> Lab </p>
 						</div>
+						<i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_unchecked </i>
+						<i class="material-icons" id="grey"> radio_button_unchecked </i>
 						<p> Write parallel code </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -241,11 +278,12 @@
 							<i class='fas fa-tag'></i>
 							<p> Lab </p>
 						</div>
+						<i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_unchecked </i>
+						<i class="material-icons" id="grey"> radio_button_unchecked </i>
 						<p> Write report PDF </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -256,6 +294,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Lab </p>
 						</div>
+						<i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 			</div>
@@ -269,12 +308,12 @@
 					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
 					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
-					<div class="project-option" onclick = closeElement(this.parentNode.parentNode)> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-archive'></i></div> Archive </div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_unchecked </i>
+						<i class="material-icons" id="grey"> radio_button_unchecked </i>
 						<p> Chapter 4 notes </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -284,11 +323,12 @@
 							<i class='fas fa-tag'></i>
 							<p> Optional </p>
 						</div>
+						<i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_unchecked </i>
+						<i class="material-icons" id="grey"> radio_button_unchecked </i>
 						<p> Heuristics notes </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -297,7 +337,7 @@
 						<div class = "tag purple_background">
 							<i class='fas fa-tag'></i>
 							<p> Optional </p>
-						</div>
+						</div> <i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 			</div>
@@ -311,12 +351,12 @@
 					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
 					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
-					<div class="project-option" onclick = closeElement(this.parentNode.parentNode)> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
+					<div class="project-option"> <div class="menu-icon"><i class='fas fa-trash-alt'></i></div> Delete </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-archive'></i></div> Archive </div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_checked </i>
+						<i class="material-icons" id="grey"> radio_button_checked </i>
 						<p> Lab 1: Quiz </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -326,11 +366,12 @@
 							<i class='fas fa-tag'></i>
 							<p> Exam </p>
 						</div>
+						<i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 				<div class="task">
 					<div class="task-title"> 
-						<i class="material-icons" id="grey" onclick = complete(this)> radio_button_checked </i>
+						<i class="material-icons" id="grey"> radio_button_checked </i>
 						<p> Theory Module 1: Quiz </p>
 						<i class='fas fa-ellipsis-h right' id="grey"></i>
 					</div>
@@ -340,6 +381,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Exam </p>
 						</div>
+						<i class="fas fa-plus" id="plus"></i>
 					</div>
 				</div>
 			</div> <!-- Close column -->

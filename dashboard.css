@@ -4,7 +4,9 @@ i {
 }
 
 /*share pop-up*/
+
 .share-popup {
+	display: none; /*Hidden by default*/
 	position:fixed;/*Stay in place*/
 	z-index:1;/*Sit on top*/
 	width: 30%;
@@ -32,6 +34,94 @@ i {
 	padding-top: 5%;
 	color: #696969;
 }
+
+.create-popup{
+	display: none; /*Hidden by default*/
+	position:fixed;/*Stay in place*/
+	z-index:1;/*Sit on top*/
+	width: 50%;
+	height: 90%;
+	background-color: white;
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top: 7%;
+	bottom: 7%;
+}
+.create-popup .modal-header {
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+.create-popup .modal-header h1{
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	padding-left: 8%;
+	padding-top: 2.5%;
+	color: #B3B6B7;
+}
+
+.modal-header .fa-times {
+	color: #B3B6B7;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+}
+.modal-header .icons{
+	position: absolute;
+	color:#B3B6B7;
+	padding-right: 8%;
+	padding-top: 2.5%;
+	margin-left: 80%;
+}
+
+.modal-menu{
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	padding-left: 8%;
+	color: #B3B6B7;
+}
+.modal-menu #datebutton{
+	margin-left: 10px;
+}
+.modal-menu p{
+	display: inline-block;
+	margin-left: 15px;
+}
+.modal-menu #comment{
+	display: inline-block;
+	margin-left: 25px;
+}
+.modal-menu #date, .modal-menu #date2,
+.modal-menu #text2 {
+	color:#17202A;
+	font-style: normal;
+	font-family: "Open Sans";
+	display: inline-block;
+}
+.create-popup hr {
+	margin: 2.5px 2.5px 8px 25px;
+	width: 90%;
+}
+.modal-footer button{
+	background-color: #52BE80; 
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	float: right;
+	margin-right: 40px;
+	border-radius: 5px;
+}
 .topmenu .fa-times {
 	color: #696969;
 	position: absolute;
@@ -56,7 +146,7 @@ i {
 	text-align: center;
 	margin:0;
 }
-.share-popup .share-description {
+.share-popup .description {
 	width: 80%;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -161,12 +251,12 @@ i {
 .general {
 	width: 250px;
 	left: 72%;
-	top: 120px;
+	top: 14%;
 }
 
 .column-menu {
 	width: 180px;
-	top: 60px;
+	top: 12%;
 	right: 0;
 }
 
