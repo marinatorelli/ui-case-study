@@ -3,6 +3,10 @@ body {
 	font-family: 'Open Sans';
 }
 
+i:hover {
+	color: #696969;
+}
+
 header:after {
 	content: "";
 	display: table;
@@ -24,6 +28,18 @@ header h1 {
 	padding-left: 10px;
 }
 
+a:link, a:visited {
+	text-decoration: none;
+}
+
+header a:visited {
+	color: white;
+}
+
+side-bar a:visited {
+	color: black;
+}
+
 header img {
 	float: left;
 	width: 35px;
@@ -38,8 +54,6 @@ header i {
 }
 
 /* SIDE BAR */ 
-.container{
-}
 .side-bar {
 	width: 20%;
 	height: 80%;
@@ -170,6 +184,10 @@ hr {
 }
 
 .element p {padding-left: 14px;}
+
+#side-bar-events i {
+	color: #52BE80;
+}
 
 #purple {color: #9D8CB7;}
 #dark-blue {color: #124E78;}

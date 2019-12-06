@@ -3,6 +3,7 @@
 	float: left;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
 .events-header {
@@ -83,25 +84,20 @@ input:focus::placeholder{
 	cursor: pointer;
 }
 
-#arrw:hover{
-	color: #696969;
-}
-
-
 .row {
-	width: 100%;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: flex-start;
 	margin: 10px 0 30px;
 	padding: 0 50px;
-	overflow: hidden;
+	position: relative;
 }
 
 .event {
 	transition: box-shadow .3s;
 	min-width: 28%;
-	height: 360px;
+	max-width: 28%;
+	height: 330px;
 	margin: 2%;
 	border: 3px solid #F1F1F1;
 	border-radius: 6px;
@@ -126,7 +122,7 @@ input:focus::placeholder{
 
 .event img {
 	width: 100%;
-	height: 180px;
+	height: 150px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }

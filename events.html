@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="Page.css">
 	<!-- Java Script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src = "functions.js"></script>
 </head>
@@ -22,152 +23,138 @@
 	<!-- HEADER -->
 	<header>
 		<img src="images/white_logo.png" alt="Logo">
-		<h1> Struo </h1>
+		<h1> <a href="./homepage.html"> Struo </a> </h1>
 		<i class="material-icons">settings</i>
 		<i class="material-icons">notifications</i>
 	</header>
 	<!-- SIDE MENU -->
-	<div class= "container">
-		<div class="side-bar">
-			<div class="side-header"> 
-				<div class="logo">
-					<h1> P </h1>
-				</div>
-				<h1> Personal </h1>
-				<i class='fas fa-angle-double-left'></i>
+	<div class="side-bar">
+		<div class="side-header"> 
+			<div class="logo">
+				<h1> P </h1>
 			</div>
-			<div class="top-group">
-				<div class = shortcut > 
-					<i class='fas fa-calendar-day' id="light-green"></i>
-					<p> Today </p> 
-				</div>
-				<div class = shortcut> 
-					<i class='fas fa-calendar-week' id="red"></i>
-					<p> Next Week  </p>
-				</div>
-				<div class = shortcut> 
-					<i class='far fa-calendar-alt' id="dark-grey"></i>
-					<p> Calendar View </p> 
-				</div>
-				<div class="shortcut"> 
-					<i class='fas fa-search'id="grey"></i>
-					<p> Quick Find </p> 
-				</div>
-			</div>		
-			<hr>	
-			<div class="side-bar-group">
-				<div class="group-header"> 
-					<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
-					<p> Projects </p>
-					<i class="material-icons add">add</i>
-				</div>	
-				<div class="dropdown"> 
-					<div class="element">
-						<i class='fas fa-circle' id="purple"></i>
-						<p> User Interfaces </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-circle' id="dark-blue"></i>
-						<p> Computer Architecture </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-circle' id="red"></i>
-						<p> Software Engineering </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-circle' id="dark-green"></i>
-						<p> Computer Networks </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-circle' id="mustard"></i>
-						<p> Heuristics & Optimization </p>
-					</div>
-					<div class="element" id="grey">
-						<i class="material-icons">add</i>
-						<p> Add Project </p>
-					</div>
-				</div>
+			<h1> Personal </h1>
+			<i class='fas fa-angle-double-left'></i>
+		</div>
+		<div class="top-group">
+			<div class = shortcut > 
+				<i class='fas fa-calendar-day' id="light-green"></i>
+				<p> Today </p> 
 			</div>
-			<hr>
-			<div class="side-bar-group">
-				<div class="group-header"> 
-					<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
-					<p> Labels </p>
-					<i class="material-icons add">add</i>
-				</div>
-				
-				<div class="dropdown"> 
-					<div class="element">
-						<i class='fas fa-tag' id="purple"></i>
-						<p> Optional </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-tag' id="dark-green"></i>
-						<p> Assigment </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-tag' id="mustard"></i>
-						<p> Lab </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-tag' id="red"></i>
-						<p> Exam </p>
-					</div>
-					<div class="element" id="grey">
-						<i class="material-icons">add</i>
-						<p> Add Label </p>
-					</div>
-				</div>
+			<div class = shortcut> 
+				<i class='fas fa-calendar-week' id="red"></i>
+				<p> Next Week  </p>
+			</div>
+			<div class = shortcut> 
+				<i class='far fa-calendar-alt' id="dark-grey"></i>
+				<p> Calendar View </p> 
+			</div>
+			<div class="shortcut"> 
+				<i class='fas fa-search'id="grey"></i>
+				<p> Quick Find </p> 
+			</div>
+		</div>		
+		<hr>	
+		<div class="side-bar-group">
+			<div class="group-header"> 
+				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
+				<p> <a href="./dashboard.html"> Projects </a> </p>
+				<i class="material-icons add">add</i>
 			</div>	
-			<hr>	
-			<div class="side-bar-group">
-				<div class="group-header"> 
-					<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
-					<p> My Events </p>
-					<i class="material-icons add">add</i>
+			<div class="dropdown"> 
+				<div class="element">
+					<i class='fas fa-circle' id="purple"></i>
+					<p> User Interfaces </p>
 				</div>
-				
-				<div class="dropdown"> 
-					<div class="element">
-						<i class='fas fa-users' id='light-green'></i>
-						<p> Christmas Party! </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-users' id='light-green'></i>
-						<p> Cleaning the Park </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-users' id='light-green'></i>
-						<p> Language Exchange Evening </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-users' id='light-green'></i>
-						<p> Thanksgiving dinner </p>
-					</div>
-					<div class="element">
-						<i class='fas fa-users' id='light-green'></i>
-						<p> Bookclub meeting </p>
-					</div>
-					<div class="element" id="grey">
-						<i class='fas fa-search'></i>
-						<p> Search Events </p>
-					</div>
+				<div class="element">
+					<i class='fas fa-circle' id="dark-blue"></i>
+					<p> Computer Architecture </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="red"></i>
+					<p> Software Engineering </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="dark-green"></i>
+					<p> Computer Networks </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-circle' id="mustard"></i>
+					<p> Heuristics & Optimization </p>
 				</div>
 			</div>
-			<hr>
-			<div class="bottom-group">
+		</div>
+		<hr>
+		<div class="side-bar-group">
+			<div class="group-header"> 
+				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
+				<p> Labels </p>
+				<i class="material-icons add">add</i>
+			</div>
+				
+			<div class="dropdown"> 
 				<div class="element">
-					<i class='fas fa-archive' id="grey"></i>
-					<p> My archive </p>
+					<i class='fas fa-tag' id="purple"></i>
+					<p> Optional </p>
 				</div>
 				<div class="element">
-					<i class='fas fa-history' id="grey"></i>
-					<p> My activity </p>
+					<i class='fas fa-tag' id="dark-green"></i>
+					<p> Assigment </p>
 				</div>
 				<div class="element">
-					<i class='fas fa-trash-alt' id="grey"></i>
-					<p> Trash </p>
+					<i class='fas fa-tag' id="mustard"></i>
+					<p> Lab </p>
 				</div>
+				<div class="element">
+					<i class='fas fa-tag' id="red"></i>
+					<p> Exam </p>
+				</div>
+			</div>
+		</div>	
+		<hr>	
+		<div class="side-bar-group">
+			<div class="group-header"> 
+				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
+				<p> My Events </p>
+				<i class="material-icons add">add</i>
+			</div>
+				
+			<div class="dropdown" id="side-bar-events"> 
+				<div class="element">
+					<i class='fas fa-users'></i>
+					<p> Christmas Party! </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users'></i>
+					<p> Cleaning the Park </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users'></i>
+					<p> Language Exchange Evening </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users'></i>
+					<p> Thanksgiving dinner </p>
+				</div>
+				<div class="element">
+					<i class='fas fa-users'></i>
+					<p> Bookclub meeting </p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="bottom-group">
+			<div class="element">
+				<i class='fas fa-archive' id="grey"></i>
+				<p> My archive </p>
+			</div>
+			<div class="element">
+				<i class='fas fa-history' id="grey"></i>
+				<p> My activity </p>
+			</div>
+			<div class="element">
+				<i class='fas fa-trash-alt' id="grey"></i>
+				<p> Trash </p>
 			</div>
 		</div>
 	</div>
@@ -185,8 +172,8 @@
 		<div class="event-category"> 
 			<p> My events </p>
 			<div class="arrows">
-				<i class="material-icons" id="arrw">keyboard_arrow_right</i>
-				<i class="material-icons" id="arrw">keyboard_arrow_left</i>
+				<i class="material-icons" id="right-arrow">keyboard_arrow_right</i>
+				<i class="material-icons" id="left-arrow">keyboard_arrow_left</i>
 			</div>
 		</div>
 		<div class="row" id = "my-events">
