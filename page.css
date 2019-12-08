@@ -225,6 +225,87 @@ hr {
 	background-color: rgba(0,0,0,0.4);
 }
 
+/*share pop-up*/
+.share-popup, .add-label, .create-label, .create-section, .rename {
+	width: 30%;
+	background-color: white;
+	position: relative;
+	padding: 0 0 1.5%;
+}
+
+.popup img {
+	margin: 5% 10% 0% 10%;
+	width: 80%;
+	height: auto;
+}
+
+.popup .title {
+	width: 100%;
+	font-family: "Open Sans";
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.popup .description {
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+	font-family: "Open Sans";
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 16px;
+	text-align: center;
+	display: inline-block;
+	margin:0;
+	color: #696969;
+}
+
+.how-to i { 
+	color: #52BE80;
+	display: inline-block;
+}
+
+.how-to {
+	width: 100%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	font-family: "Open Sans";
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	margin:0;
+	color: #52BE80;
+	cursor: pointer;
+}
+
+.popup input[type=text] {
+	display: inline-block;
+	line-height: 20px;
+	width: 50%;
+	margin-left: 10%;
+	margin-right: 2%;
+	padding: 5px;
+	border: 1px solid #C4C4C4;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+.popup select {
+  width: 50%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e2e2e2;
+  margin: 0 4% 0 8%;
+}
+
+.popup form {
+	display: flex;
+	align-items: center;
+}
+
 .popup h1 {
 	line-height: 24px;
 	font-family: "Open Sans";
@@ -277,16 +358,6 @@ hr {
 	color: #c4c4c4;
 }
 
-.create-project-header {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.create-project-header i {
-	padding: 0 6px;
-}
-
 .create-project-header input[type=text] {
 	border: none;
 	font-size: 1.8em;
@@ -335,11 +406,30 @@ hr {
 	width: 35%;
 }
 
-.create-project ::placeholder {
+.popup ::placeholder {
 	color: #c4c4c4;
 }
 
-.create-project :focus{
+.popup :focus{
 	color: black;
 	transition: 0.2s;
+}
+
+.create-task {
+	width: 30%;
+	background-color: white;
+	padding: 0 0% 6% 1.5%;
+	position: relative;
+	color: #c4c4c4;
+}
+
+.create-task form {
+	flex-direction: column;
+}
+
+#task-description {
+	border: none;
+	margin-left: 4%;
+	width: 85%;
+	font-size: 1em;
 }

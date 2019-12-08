@@ -25,14 +25,16 @@
 		<div class = "create-project">
 			<form class = "create-project-header" name="new-project" onsubmit="return false">
 				<input type="text" name="title" placeholder="Untitled" required>
-				<i class="far fa-star"></i>
-				<i class="fas fa-ellipsis-h"></i>
+				<div>
+					<i class="far fa-star"></i>
+					<i class="fas fa-ellipsis-h"></i>
+				</div>
 				<input type="submit" class="logbtn" value="Create" onclick = createProject(this.parentNode.parentNode.parentNode)>
 			</form>
 			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
 			<div class = "create-options">
-				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Created </span><span> nov. 14, 2019 11:30am </span> </div>
-				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Last Update </span><span> nov. 14, 2019 11:30am </span> </div>
+				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Created </span><span id="date-created"> nov. 14, 2019 11:30am </span> </div>
+				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Last Update </span><span id="last-update"> nov. 14, 2019 11:30am </span> </div>
 				<div class="create-option"><i class="fas fa-users"></i><span id="grey">Collaborators </span><span> Empty </span> </div>
 				<div class="create-option"><i class="fas fa-check-circle"></i><span id="grey">Status </span><span> Empty </span></div>
 				<div class="create-option"><i class="fas fa-calendar-day"></i><span id="grey">Submission </span><span> Empty </span></div>
@@ -44,6 +46,18 @@
 				<hr>
 				<p> Description </p>
 			</div>
+		</div>
+	</div>
+	
+	<div class="popup" id="create-label">
+		<div class="create-label">
+			<h1>Create new label</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<hr>
+			<form name="create-label" onsubmit="return false">
+				<input type="text" name="label" placeholder="Label name" autocomplete="off" required>
+				<input type="submit" class="logbtn" value="Create" onclick = createLabel(this.parentNode.parentNode.parentNode)>
+			</form>
 		</div>
 	</div>
 	
@@ -86,7 +100,7 @@
 			<div class="group-header"> 
 				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
 				<p> <a href="./dashboard.html"> Projects </a> </p>
-				<i class="material-icons add" onclick = show_popup("create-project")>add</i>
+				<i class="material-icons add" onclick = "show_popup('create-project');updateDate();">add</i>
 			</div>	
 			<div class="dropdown" id="projects"> 
 				<div class="element">
@@ -116,7 +130,7 @@
 			<div class="group-header"> 
 				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
 				<p> Labels </p>
-				<i class="material-icons add">add</i>
+				<i class="material-icons add" onclick = show_popup("create-label")>add</i>
 			</div>
 				
 			<div class="dropdown"> 
