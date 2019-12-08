@@ -25,25 +25,101 @@
 			<h1>Share options</h1>
 			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
 			<hr>
-			<div class = form>
-				<input type="text" placeholder="Email or username" id="user" autocomplete="off" required>
+				<input type="text" placeholder="Email or username" autocomplete="off" required>
 				<input type="submit" class="logbtn" value="Invite"/>
-			</div>
 			<img src="images/drawing1.png">
-			<div class= title><p>Organise work together</p></div>
-			<div class = "share-description">Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
-			<div class = "howto">
+			<p class="title">Organise work together</p>
+			<div class = "description">Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
+			<div class = "how-to">
 				<i class="far fa-question-circle"></i>&nbsp How to colaborate with others?
 			</div>
 		</div>
 	</div>
 	
-	<div class = "popup" id="add-label">
-		<div class = "add-label-task">
-			<div class = "topmenu">
-				<h1>Add label</h1><i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode.parentNode)></i>
+	<div class = "popup" id="create-project">
+		<div class = "create-project">
+			<form class = "create-project-header" name="new-project" onsubmit="return false">
+				<input type="text" name="title" placeholder="Untitled" required>
+				<i class="far fa-star"></i>
+				<i class="fas fa-ellipsis-h"></i>
+				<input type="submit" class="logbtn" value="Create" onclick = createProject(this.parentNode.parentNode.parentNode)>
+			</form>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<div class = "create-options">
+				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Created </span><span> nov. 14, 2019 11:30am </span> </div>
+				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Last Update </span><span> nov. 14, 2019 11:30am </span> </div>
+				<div class="create-option"><i class="fas fa-users"></i><span id="grey">Collaborators </span><span> Empty </span> </div>
+				<div class="create-option"><i class="fas fa-check-circle"></i><span id="grey">Status </span><span> Empty </span></div>
+				<div class="create-option"><i class="fas fa-calendar-day"></i><span id="grey">Submission </span><span> Empty </span></div>
+				<div class="create-option"><i class="fas fa-bell"></i><span id="grey">Reminders </span><span> Empty </span></div>
+				<div class="create-option"><i class="fas fa-plus"></i><span id="grey">Add a property </span>
+				<span> Empty </span></div>
+				<hr>
+				<p id="project-comment"> Add a comment </p>
+				<hr>
+				<p> Description </p>
 			</div>
+		</div>
+	</div>
+	
+	<div class="popup" id="create-section">
+		<div class="create-section">
+			<h1>Create new section</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
 			<hr>
+			<form name="create-section" onsubmit="return false">
+				<input type="text" name="section-name" placeholder="Section name" autocomplete="off" required>
+				<input type="submit" class="logbtn" value="Create" onclick = createSection(this.parentNode.parentNode.parentNode)>
+			</form>
+		</div>
+	</div>
+	
+	<div class="popup" id="rename">
+		<div class="rename">
+			<h1>Rename</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<hr>
+			<form name="rename" onsubmit="return false">
+				<input type="text" name="new-name" placeholder="New name" autocomplete="off" required>
+				<input type="submit" class="logbtn" value="Rename" onclick = renameProject(this.parentNode.parentNode.parentNode)>
+			</form>
+		</div>
+	</div>
+	
+	<div class="popup" id="create-task">
+		<div class="create-task">
+			<h1>Create new task</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<hr>
+			<form name="create-task" onsubmit="return false">
+				<input type="text" name="task-name" placeholder="Untitled" autocomplete="off" required>
+				<input type="text" id="task-description" name="task-description" placeholder="Description" autocomplete="off" required>
+				<input type="submit" class="logbtn" value="Create" onclick = createTask(this.parentNode.parentNode.parentNode)>
+			</form>
+		</div>
+	</div>
+	
+	<div class = "popup" id="add-label">
+		<div class = "add-label">
+			<h1>Add label</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<hr>
+			<select id="select-label">
+				<option disabled selected>Labels</option>
+			</select>
+			<input type="submit" class="logbtn" value="Add" onclick = addLabel(this.parentNode.parentNode)>
+		</div>
+	</div>
+	
+	<div class="popup" id="create-label">
+		<div class="create-label">
+			<h1>Create new label</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<hr>
+			<form name="create-label" onsubmit="return false">
+				<input type="text" name="label" placeholder="Label name" autocomplete="off" required>
+				<input type="submit" class="logbtn" value="Create" onclick = createLabel(this.parentNode.parentNode.parentNode)>
+			</form>
 		</div>
 	</div>
 
@@ -86,9 +162,9 @@
 			<div class="group-header"> 
 				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
 				<p> Projects </p>
-				<i class="material-icons add">add</i>
+				<i class="material-icons add" onclick = show_popup("create-project")>add</i>
 			</div>	
-			<div class="dropdown"> 
+			<div class="dropdown" id="projects"> 
 				<div class="element">
 					<i class='fas fa-circle' id="purple"></i>
 					<p> User Interfaces </p>
@@ -116,10 +192,10 @@
 			<div class="group-header"> 
 				<i class="material-icons arrow-down" onclick = showMenu(this.parentNode.parentNode)>keyboard_arrow_down</i>
 				<p> Labels </p>
-				<i class="material-icons add">add</i>
+				<i class="material-icons add" onclick = show_popup("create-label")>add</i>
 			</div>
 			
-			<div class="dropdown"> 
+			<div class="dropdown" id="labels"> 
 				<div class="element">
 					<i class='fas fa-tag' id="purple"></i>
 					<p> Optional </p>
@@ -194,28 +270,28 @@
 	<div class="content"> 
 		<!-- TITLE AND OPTIONS-->
 		<div class="projects-header">
-				<h1>Computer Architecture</h1>
-				<i class="fas fa-plus"></i>
+				<h1 id="project-name">Computer Architecture</h1>
+				<i class="fas fa-plus" onclick = show_popup("create-project")></i>
 				<i class="far fa-comment-alt"></i>
 				<i class="fas fa-user-plus" onclick = show_popup("share")></i>
 				<i class="fas fa-bars" onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 		</div>
 		
 		<div class="general projects-menu">
-			<div class="project-option"> <div class="menu-icon"><i class="material-icons">create_new_folder</i></div> Add section </div>
-			<div class="project-option"> <div class="menu-icon"><i class="fa fa-edit"></i></div> Rename </div>
+			<div class="project-option" onclick = show_popup("create-section")> <div class="menu-icon"><i class="material-icons">create_new_folder</i></div> Add section </div>
+			<div class="project-option" onclick = show_popup("rename")> <div class="menu-icon"><i class="fa fa-edit"></i></div> Rename </div>
 			<div class="project-option"> <div class="menu-icon"><i class="material-icons">star_border</i></div> Add to favorites </div>
 		</div>
 
 		<!-- CONTENTS -->
 		<div class="columns-container">
 			<div class="column">
-				<div class="column-header"> 
+				<div class="column-header" id="instance-header"> 
 					<p> Not Started </p>
-					<i class="fas fa-plus"></i>
+					<i class="fas fa-plus" onclick = "show_popup('create-task');addToColumn(this.parentNode.parentNode)"></i>
 					<i class='fas fa-ellipsis-h' onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 				</div>
-				<div class="column-menu projects-menu">
+				<div class="column-menu projects-menu" id="instance-menu">
 					<div class="project-option"> <div class="menu-icon"><i class="fa fa-sort"></i></div> Sort by </div>
 					<div class="project-option"> <div class="menu-icon"><i class='fas fa-arrows-alt-h'></i></div> Move to </div>
 					<div class="project-option"> <div class="menu-icon"><i class='far fa-eye-slash'></i></div> Hide </div>
@@ -235,7 +311,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Lab </p>
 						</div>
-						<i class="material-icons" onclick = show_popup("add-label")>add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 	
 				</div>
@@ -252,7 +328,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Lab </p>
 						</div>
-						<i class="material-icons">add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 				</div>
 				<div class="task">
@@ -268,14 +344,14 @@
 							<i class='fas fa-tag'></i>
 							<p> Lab </p>
 						</div>
-						<i class="material-icons">add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 				</div>
 			</div>
 			<div class="column">
 				<div class="column-header"> 
 					<p> In Progress </p>
-					<i class="fas fa-plus left"></i>
+					<i class="fas fa-plus left" onclick = "show_popup('create-task');addToColumn(this.parentNode.parentNode)"></i>
 					<i class='fas fa-ellipsis-h' onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 				</div>
 				<div class="column-menu projects-menu">
@@ -297,7 +373,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Optional </p>
 						</div>
-						<i class="material-icons">add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 				</div>
 				<div class="task">
@@ -312,14 +388,14 @@
 							<i class='fas fa-tag'></i>
 							<p> Optional </p>
 						</div>
-						<i class="material-icons">add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 				</div>
 			</div>
 			<div class="column">
 				<div class="column-header"> 
 					<p> Completed </p>
-					<i class="fas fa-plus left"></i>
+					<i class="fas fa-plus left" onclick = "show_popup('create-task');addToColumn(this.parentNode.parentNode)"></i>
 					<i class='fas fa-ellipsis-h' onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 				</div>
 				<div class="column-menu projects-menu">
@@ -341,7 +417,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Exam </p>
 						</div>
-						<i class="material-icons">add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 				</div>
 				<div class="task">
@@ -356,7 +432,7 @@
 							<i class='fas fa-tag'></i>
 							<p> Exam </p>
 						</div>
-						<i class="material-icons">add</i>
+						<i class="material-icons" onclick = "show_popup('add-label');displayOptions(this, this.parentNode);">add</i>
 					</div>
 				</div>
 			</div> <!-- Close column -->

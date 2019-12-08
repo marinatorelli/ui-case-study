@@ -110,7 +110,7 @@ function close_popup(popup) {
 }
 
 function createLabel(popup) {
-	var newLabel = document.forms["label-form"]["label"].value;
+	var newLabel = document.forms["create-label"]["label"].value;
 	var label = document.createElement("div");
 	label.classList.add("element");
 	var icon = document.createElement("i");
@@ -120,6 +120,114 @@ function createLabel(popup) {
 	var p = document.createElement("p");
 	p.innerHTML = newLabel;
 	label.appendChild(p);
-	var menu = document.getElementById("labels").appendChild(label);
+	document.getElementById("labels").appendChild(label);
+	popup.style.display = "none";
+}
+
+function createProject(popup) {
+	var projectName = document.forms["new-project"]["title"].value;
+	var project = document.createElement("div");
+	project.classList.add("element");
+	var icon = document.createElement("i");
+	icon.classList.add('fas');
+	icon.classList.add('fa-circle')
+	project.appendChild(icon);
+	var p = document.createElement("p");
+	p.innerHTML = projectName;
+	project.appendChild(p);
+	document.getElementById("projects").appendChild(project);
+	popup.style.display = "none";
+}
+
+function createSection(popup) {
+	var sectionName = document.forms["create-section"]["section-name"].value;
+	var section = document.createElement("div");
+	section.classList.add("column");
+	var headerInstance = document.getElementById("instance-header");
+	var header = headerInstance.cloneNode(true);
+	header.children[0].innerHTML = sectionName;
+	section.appendChild(header);
+	var menuInstance = document.getElementById("instance-menu");
+	var menu = menuInstance.cloneNode(true);
+	section.appendChild(menu);
+	document.getElementsByClassName("columns-container")[0].appendChild(section);
+	popup.style.display = "none";
+}
+
+function renameProject(popup) {
+	var newName = document.forms["rename"]["new-name"].value;
+	var h1 = document.getElementById("project-name");
+	h1.innerHTML = newName;
+	popup.style.display = "none";
+}
+
+var column;
+
+function addToColumn(selectedColumn) {
+	column = selectedColumn;
+}
+
+function createTask(popup) {
+	popup.style.display = "none";
+	var name = document.forms["create-task"]["task-name"].value;
+	var description = document.forms["create-task"]["task-description"].value;
+	var taskInstance = document.getElementsByClassName("task")[0];
+	var task = taskInstance.cloneNode(true);
+	var title = task.children[0].children[1];
+	title.innerHTML = name;
+	var p = task.children[1];
+	p.innerHTML = description;
+	var tags = task.children[2];
+	var i;
+	for (i = 0; i < (tags.children.length-1); i++) {
+		tags.children[i].remove();
+	}
+	column.appendChild(task);
+	popup.style.display = "none";
+}
+
+var addElement;
+var tags;
+
+function displayOptions(addButton, tagsDiv) {
+	addElement = addButton;
+	tags = tagsDiv;
+	var children = document.getElementById("labels").children;
+	var options = document.getElementById("select-label");
+	if (options.children.length < children.length) {
+		var i;
+		for (i=(options.children.length-1); i < children.length; i++) {
+			var label = document.createElement("option");
+			var name = children[i].children[1].innerHTML;
+			label.innerHTML = name;
+			label.value = name;
+			options.appendChild(label);
+		}
+	}
+}
+
+function addLabel(popup) {
+	var index = document.getElementById("select-label").selectedIndex;
+	var name = document.getElementsByTagName("option")[index].value;
+	var tag = document.createElement("div");
+	tag.classList.add("tag");
+	var background;
+	var labels = document.getElementById("labels").children;
+	var i;
+	for (i=0; i<labels.length; i++) {
+		var label = labels[i].children[1].innerHTML;
+		if (label.localeCompare(name)==0) {
+			background = labels[i].children[0].style.color;
+		}
+	}
+	tag.style.backgroundColor = background;
+	var icon = document.createElement("i");
+	icon.classList.add('fas');
+	icon.classList.add('fa-tag');
+	var p = document.createElement("p");
+	p.innerHTML = name;
+	tag.appendChild(icon);
+	tag.appendChild(p);
+	tags.insertBefore(tag, addElement);
 	popup.style.display = "none";
 }

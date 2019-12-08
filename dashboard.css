@@ -4,49 +4,29 @@ i {
 }
 
 /*share pop-up*/
-.share-popup, .add-label-task {
+.share-popup, .add-label, .create-label, .create-section, .rename {
 	width: 30%;
-	height: 86%;
 	background-color: white;
 	position: relative;
+	padding: 0 0 1.5%;
 }
 
-.popup h1 {
-	line-height: 24px;
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	margin:0;
-	padding-left: 8%;
-	padding-top: 5%;
-	color: #696969;
-}
-.fa-times {
-	color: #696969;
-	position: absolute;
-	top: 5%;
-	right: 8%;
-	cursor: pointer;
-}
-.popup hr {
-	margin: 5% 5% 8% 5%;
-	width: 90%;
-}
-.share-popup img {
+.popup img {
 	margin: 5% 10% 0% 10%;
 	width: 80%;
 	height: auto;
 }
-.share-popup .title {
+
+.popup .title {
 	width: 100%;
 	font-family: "Open Sans";
 	font-size: 25px;
 	font-weight: bold;
 	text-align: center;
-	margin:0;
+	margin: 20px 0;
 }
-.share-popup .share-description {
+
+.popup .description {
 	width: 80%;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -59,11 +39,13 @@ i {
 	margin:0;
 	color: #696969;
 }
-.share-popup i { 
+
+.how-to i { 
 	color: #52BE80;
 	display: inline-block;
 }
-.share-popup .howto {
+
+.how-to {
 	width: 100%;
 	padding-top: 4%;
 	padding-bottom: 4%;
@@ -75,12 +57,8 @@ i {
 	color: #52BE80;
 	cursor: pointer;
 }
-.form {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-}
-#user {
+
+input[type=text] {
 	display: inline-block;
 	line-height: 20px;
 	width: 50%;
@@ -91,21 +69,39 @@ i {
 	box-sizing: border-box;
 	border-radius: 3px;
 }
-.logbtn {
-	display: inline-block;
-	line-height: 30px;
-    width: 26%;
-    border: none;
-    border-radius: 5px;
-    background: #52BE80;
-    color: #fff;
-    outline: none;
-    cursor: pointer;
-	transition: .5s;
-	margin-right: 10%;
+
+select {
+  width: 50%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e2e2e2;
+  margin: 0 4% 0 8%;
 }
-.logbtn:hover {
-    
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.create-task {
+	width: 30%;
+	background-color: white;
+	padding: 0 0% 6% 1.5%;
+	position: relative;
+	color: #c4c4c4;
+}
+
+.create-task form {
+	flex-direction: column;
+}
+
+#task-description {
+	border: none;
+	margin-left: 4%;
+	width: 85%;
+	font-size: 1em;
 }
 
 .content {
@@ -190,7 +186,7 @@ i {
 
 .column {
 	width: 32%;
-	margin: 0 auto 1%;
+	margin: 0 0.5% 1%;
 	background-color: #f5f5f5;
 	display: flex;
 	flex-direction: column;
