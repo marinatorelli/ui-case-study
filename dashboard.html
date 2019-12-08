@@ -46,8 +46,8 @@
 			</form>
 			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
 			<div class = "create-options">
-				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Created </span><span> nov. 14, 2019 11:30am </span> </div>
-				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Last Update </span><span> nov. 14, 2019 11:30am </span> </div>
+				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Created </span><span id="date-created"> nov. 14, 2019 11:30am </span> </div>
+				<div class="create-option"><i class='fas fa-history'></i></i><span id="grey">Last Update </span><span id="last-update"> nov. 14, 2019 11:30am </span> </div>
 				<div class="create-option"><i class="fas fa-users"></i><span id="grey">Collaborators </span><span> Empty </span> </div>
 				<div class="create-option"><i class="fas fa-check-circle"></i><span id="grey">Status </span><span> Empty </span></div>
 				<div class="create-option"><i class="fas fa-calendar-day"></i><span id="grey">Submission </span><span> Empty </span></div>
@@ -271,7 +271,7 @@
 		<!-- TITLE AND OPTIONS-->
 		<div class="projects-header">
 				<h1 id="project-name">Computer Architecture</h1>
-				<i class="fas fa-plus" onclick = show_popup("create-project")></i>
+				<i class="fas fa-plus" onclick = "show_popup('create-project');updateDate()"></i>
 				<i class="far fa-comment-alt"></i>
 				<i class="fas fa-user-plus" onclick = show_popup("share")></i>
 				<i class="fas fa-bars" onclick = displayProjectsMenu(this.parentNode.parentNode)></i>

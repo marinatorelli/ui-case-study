@@ -124,6 +124,57 @@ function createLabel(popup) {
 	popup.style.display = "none";
 }
 
+function updateDate() {
+	var date = new Date();
+	var nmonth = date.getMonth();
+	var month;
+	switch (nmonth) {
+		case 0:
+			month = "jan."
+			break;
+		case 1:
+			month = "feb."
+			break;
+		case 2:
+			month = "mar."
+			break;
+		case 3:
+			month = "apr."
+			break;
+		case 4:
+			month = "may."
+			break;
+		case 5:
+			month = "jun."
+			break;
+		case 6:
+			month = "jul."
+			break;
+		case 7:
+			month = "aug."
+			break;
+		case 8:
+			month = "sep."
+			break;
+		case 9:
+			month = "oct."
+			break;
+		case 10:
+			month = "nov."
+			break;
+		case 11:
+			month = "dec."
+			break;
+	}
+	var day = date.getDate();
+	var year = date.getFullYear();
+	var hour = date.getHours();
+	var minutes = date.getMinutes();
+	var time = month.toString() + " " + day.toString() + ", " + year.toString() + " " + hour.toString() + ":" + minutes.toString();
+	document.getElementById("date-created").innerHTML = time;
+	document.getElementById("last-update").innerHTML = time;
+}
+
 function createProject(popup) {
 	var projectName = document.forms["new-project"]["title"].value;
 	var project = document.createElement("div");
@@ -194,7 +245,7 @@ function displayOptions(addButton, tagsDiv) {
 	tags = tagsDiv;
 	var children = document.getElementById("labels").children;
 	var options = document.getElementById("select-label");
-	if (options.children.length < children.length) {
+	if (options.children.length-1 < children.length) {
 		var i;
 		for (i=(options.children.length-1); i < children.length; i++) {
 			var label = document.createElement("option");
@@ -217,7 +268,23 @@ function addLabel(popup) {
 	for (i=0; i<labels.length; i++) {
 		var label = labels[i].children[1].innerHTML;
 		if (label.localeCompare(name)==0) {
-			background = labels[i].children[0].style.color;
+			id = labels[i].children[0].id;
+			switch (id) {
+				case "purple":
+					background = "#9D8CB7";
+					break;
+				case "dark-green":
+					background = "#38726C";
+					break;
+				case "mustard":
+					background = "#FF9F1C";
+					break;
+				case "red":
+					background = "#F96F5D";
+					break;
+				default:
+					background = "#c4c4c4";
+			}
 		}
 	}
 	tag.style.backgroundColor = background;
