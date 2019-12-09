@@ -40,8 +40,10 @@
 		<div class = "create-project">
 			<form class = "create-project-header" name="new-project" onsubmit="return false">
 				<input type="text" name="title" placeholder="Untitled" required>
-				<i class="far fa-star"></i>
-				<i class="fas fa-ellipsis-h"></i>
+				<div>
+					<i class="far fa-star"></i>
+					<i class="fas fa-ellipsis-h"></i>
+				</div>
 				<input type="submit" class="logbtn" value="Create" onclick = createProject(this.parentNode.parentNode.parentNode)>
 			</form>
 			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
@@ -272,7 +274,7 @@
 		<div class="projects-header">
 				<h1 id="project-name">Computer Architecture</h1>
 				<i class="fas fa-plus" onclick = "show_popup('create-project');updateDate()"></i>
-				<i class="far fa-comment-alt"></i>
+				<i class="far fa-comment-alt" onclick = openChat()></i>
 				<i class="fas fa-user-plus" onclick = show_popup("share")></i>
 				<i class="fas fa-bars" onclick = displayProjectsMenu(this.parentNode.parentNode)></i>
 		</div>
@@ -438,6 +440,53 @@
 			</div> <!-- Close column -->
 		</div>  <!-- Close columns container -->
 	</div> <!-- Close content -->
+
+		<div class = "chat" id = "chat">
+			<div class = "chat-header">
+				<i class = "material-icons" onclick = closeChat()> close </i>
+				<p> Comments </p>
+				<div class = "right"> 
+					<p> All</p>
+					<i class="material-icons">keyboard_arrow_down</i>
+					<i class='fas fa-sliders-h'></i>
+				</div>
+			</div>
+			<div class = "chat-section" id = "today">
+				<p class = "chat-date"> Today </p>
+				<p class = "chat-author"> @milliecorrall	<span style = "font-size:14px; margin-left: 20px;"> 4 hours ago </span></p>
+				<p class = "chat-text"> We should try to keep a consistent format
+					for code comments girls, I say we follow <span style = "color:#52BE80">@mhamilton</span>  
+					comments format since she is the one that has written the most! Lmk what you think.
+				</p>
+				<div class = "chat-thread">
+					<p class = "chat-author"> @mhamilton	<span style = "font-size:14px; margin-left: 20px;"> 3 hours ago</span></p>
+					<p class = "chat-text"> Perfect! I'm currently updating mine 
+						and I also think we should keep indentation all the same so I've been 
+						revising all our code and now it looks super clean :)
+					</p>
+				</div>
+				<div class="input-message">
+					<input type="text" id = "message">
+					<i class="material-icons" onclick = sendMessage(this.parentNode)>send</i>
+				</div>
+			</div>
+			<div class = "chat-section">
+				<p class = "chat-date"> Yesterday </p>
+				<p class = "chat-author"> @mhamilton	<span style = "font-size:14px; margin-left: 20px;"> yesterday, 4pm </span></p>
+				<p class = "chat-text"> I have compiled the sequential code and it works!
+					One thing though, we are getting very similar values to what the calculator
+					would give us but I don't think we are doing the final rounding right. We
+					need to check that
+				</p>
+			</div>
+			<div class = "chat-section">
+				<p class = "chat-date"> Monday </p>
+				<p class = "chat-author"> @mhamilton	<span style = "font-size:14px; margin-left: 20px;"> monday, 2pm </span></p>
+				<p class = "chat-text"> I'm getting problems when compiling the code so if anyone
+					can check the errors it would be great!
+				</p>
+			</div>
+		</div>
 
 </body>
 </html>

@@ -21,6 +21,14 @@ function displayProjectsMenu(element) {
 	children[1].classList.toggle("show");
 }
 
+function openChat() {
+    document.getElementById("chat").style.display = "block";
+}
+
+function closeChat()  {
+	document.getElementById("chat").style.display = "none";
+}
+
 /* Function that receives as argument an element (task or column) and closes it */
 function closeElement(element) {
     element.remove();
@@ -36,7 +44,7 @@ function complete(task) {
 }
 
 /* Variable that keeps track of the events overflowing in the my-events row */
-overflow = 0;
+overflow = 2;
 
 $(document).ready(function() {
     makeDrag();
@@ -357,4 +365,20 @@ function addLabel(popup) {
 	/* Insert the node in the tags of the task specified in the variables */
 	tags.insertBefore(tag, addElement);
 	popup.style.display = "none"; /* Hide popup */
+}
+
+/* Function that reads an input message and inserts it in the chat */
+function sendMessage(referenceNode) {
+	var message = document.getElementById("message").value;
+	document.getElementById("message").value = ""; /* Reset the input */
+	/* Take an instance of a chat thread an change the values */
+	var messageInstance = document.getElementsByClassName("chat-thread")[0];
+	var thread = messageInstance.cloneNode(true);
+	var time = thread.children[0].children[0];
+	time.innerHTML = "Now";
+	var chatText = thread.children[1];
+	chatText.innerHTML = message;
+	var chat = document.getElementById("today");
+	/* We use the div of the message input passed as argument as reference node to insert before */
+	chat.insertBefore(thread, referenceNode);
 }

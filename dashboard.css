@@ -2,108 +2,6 @@
 i {
 	cursor: pointer; /* Change cursor to show you can click icons */
 }
-
-/*share pop-up*/
-.share-popup, .add-label, .create-label, .create-section, .rename {
-	width: 30%;
-	background-color: white;
-	position: relative;
-	padding: 0 0 1.5%;
-}
-
-.popup img {
-	margin: 5% 10% 0% 10%;
-	width: 80%;
-	height: auto;
-}
-
-.popup .title {
-	width: 100%;
-	font-family: "Open Sans";
-	font-size: 25px;
-	font-weight: bold;
-	text-align: center;
-	margin: 20px 0;
-}
-
-.popup .description {
-	width: 80%;
-	padding-left: 10%;
-	padding-right: 10%;
-	font-family: "Open Sans";
-	font-size: 12px;
-	font-weight: normal;
-	line-height: 16px;
-	text-align: center;
-	display: inline-block;
-	margin:0;
-	color: #696969;
-}
-
-.how-to i { 
-	color: #52BE80;
-	display: inline-block;
-}
-
-.how-to {
-	width: 100%;
-	padding-top: 4%;
-	padding-bottom: 4%;
-	font-family: "Open Sans";
-	font-size: 12px;
-	font-weight: normal;
-	text-align: center;
-	margin:0;
-	color: #52BE80;
-	cursor: pointer;
-}
-
-input[type=text] {
-	display: inline-block;
-	line-height: 20px;
-	width: 50%;
-	margin-left: 10%;
-	margin-right: 2%;
-	padding: 5px;
-	border: 1px solid #C4C4C4;
-	box-sizing: border-box;
-	border-radius: 3px;
-}
-
-select {
-  width: 50%;
-  padding: 16px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #e2e2e2;
-  margin: 0 4% 0 8%;
-}
-
-form {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.create-task {
-	width: 30%;
-	background-color: white;
-	padding: 0 0% 6% 1.5%;
-	position: relative;
-	color: #c4c4c4;
-}
-
-.create-task form {
-	flex-direction: column;
-}
-
-#task-description {
-	border: none;
-	margin-left: 4%;
-	width: 85%;
-	font-size: 1em;
-}
-
 .content {
 	width: 80%;
 	float: left;
@@ -178,15 +76,13 @@ form {
 
 /* TASK CATEGORIES */
 .columns-container {
-	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
 	padding: 0 1%;
 }
 
 .column {
+	float: left;
 	width: 32%;
-	margin: 0 0.5% 1%;
+	margin: 0 0.6% 1%;
 	background-color: #f5f5f5;
 	display: flex;
 	flex-direction: column;
@@ -268,3 +164,92 @@ form {
 .mustard_background {background-color: #FFBD00;}
 .red_background {background-color: #C03221;}
 .purple_background {background-color: #9E7B9B;}
+
+.chat {
+	display: none;
+	width: 30%;
+	position: absolute;
+	right: 0;
+	z-index: 3;
+	border-left: 1px solid #C4C4C4;
+	background: white;
+	height: 1030px;
+	overflow: hidden;
+}
+
+.chat-header {
+	display: flex;
+	align-items: center;
+	border-bottom: 0.5px solid #52BE80;
+	height: 80px;
+	box-sizing: border-box;
+	padding: 2%;
+}
+.chat-header i {
+	float: left;
+	color: #C4C4C4;
+	margin: 12px;
+	line-height: 40px;
+}
+.chat-header p {
+	font-size: 24px;
+	line-height: 16px;
+	margin-left: 8px;
+	float: left;
+	color: #696969;
+}
+.chat .right {
+	height: 100%;
+	float: right;
+}
+.chat .right p {
+	font-size: 18px;
+	color: #C4C4C4;
+	line-height: 26px;
+	margin-right: 0px;}
+
+.chat-section {
+	width: 100%;
+	border-bottom: 0.5px solid #52BE80;
+	padding-bottom: 12%;
+	padding-right: 5%;
+	box-sizing: border-box;
+}
+.chat-section p {
+	margin-left: 36px; 
+	margin-right: 12px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+.chat-date {font-size: 24px; }
+.chat-thread {margin-left: 40px;}
+.chat-author {color: #52BE80;}
+
+.input-message {
+	display: flex;
+	border-radius: 10px;
+	background-color: #52BE80;
+	align-items: center;
+	width: 85%;
+	padding: 1%;
+	color: white;
+	margin-top: 8%;
+	margin-left: 10%;
+}
+
+.input-message i {
+	margin-left: auto;
+}
+
+.chat input[type=text] {
+	width: 90%;
+	border: none;
+	background-color: #52BE80;
+	padding: 2px 8px;
+	color: white;
+}
+
+.chat input[type=text]:focus {
+	outline: none;
+	color: white;
+}
