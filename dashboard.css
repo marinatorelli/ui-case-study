@@ -119,10 +119,11 @@ i {
 .task-title {
 	padding: 5% 3% 0;
 	display: flex;
+	align-items: center;
 }
 
 .task-title p {
-	margin: 1px 0 0;
+	margin: 0;
 	padding-left: 3%;
 }
 
@@ -149,16 +150,16 @@ i {
 	color: white;
 	font-size: 0.8em;
 	margin: 0 2%;
+	padding: 4px 7px;
+	display: flex;
+	align-items: center;
 }
 .tag i {
-	padding: 5px 7px;
-	float: left;
+	margin-right: 8px;
 	color: white;
 }
 .tag p {
 	margin: 0;
-	padding: 2px 7px 0 0;
-	float: left;
 }
 
 .mustard_background {background-color: #FFBD00;}
@@ -167,7 +168,7 @@ i {
 
 .chat {
 	display: none;
-	width: 30%;
+	width: 25%;
 	position: absolute;
 	right: 0;
 	z-index: 3;

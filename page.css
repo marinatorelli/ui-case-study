@@ -18,10 +18,11 @@ header {
 	background: #52BE80;
 	padding: 10px;
 	margin: 0;
+	display: flex;
+	align-items: center;
 }
 
 header h1 {
-	float: left;
 	font-family: 'Delius Unicase', cursive;
 	font-size: 1.75em;
 	margin: 0;
@@ -32,24 +33,23 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
-header a:visited {
+header a:link, header a:visited {
 	color: white;
 }
 
-side-bar a:visited {
-	color: black;
-}
-
 header img {
-	float: left;
 	width: 35px;
 	height: 35px;
 	margin-left: 5px;
 }
 
+header .icons {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+
 header i {
-	margin-top: 5px;
-	float: right;
 	padding: 0 5px;
 }
 
@@ -68,10 +68,20 @@ header i {
 	top:0;
 }
 
+.side-bar a:link, .side-bar a:visited {
+	color: black;
+}
+
 .side-header {
 	width: 100%;
 	display: flex;
+	align-items: center;
 	float: left;
+}
+
+.side-header h1 {
+	font-size: 1.3em;
+	margin. 0;
 }
 
 .logo {
@@ -83,15 +93,13 @@ header i {
 	text-align: center;
 	padding: 5px;
 	margin: 12px;
-}
-
-.side-header h1 {
-	font-size: 1.3em;
-	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .logo h1 {
-	margin-top: 3px;
+	margin: 0;
 }
 
 .side-header i {
