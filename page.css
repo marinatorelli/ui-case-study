@@ -18,11 +18,10 @@ header {
 	background: #52BE80;
 	padding: 10px;
 	margin: 0;
-	display: flex;
-	align-items: center;
 }
 
 header h1 {
+	float: left;
 	font-family: 'Delius Unicase', cursive;
 	font-size: 1.75em;
 	margin: 0;
@@ -33,23 +32,24 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
-header a:link, header a:visited {
+header a:visited {
 	color: white;
 }
 
+side-bar a:visited {
+	color: black;
+}
+
 header img {
+	float: left;
 	width: 35px;
 	height: 35px;
 	margin-left: 5px;
 }
 
-header .icons {
-	margin-left: auto;
-	display: flex;
-	align-items: center;
-}
-
 header i {
+	margin-top: 5px;
+	float: right;
 	padding: 0 5px;
 }
 
@@ -68,20 +68,10 @@ header i {
 	top:0;
 }
 
-.side-bar a:link, .side-bar a:visited {
-	color: black;
-}
-
 .side-header {
 	width: 100%;
 	display: flex;
-	align-items: center;
 	float: left;
-}
-
-.side-header h1 {
-	font-size: 1.3em;
-	margin. 0;
 }
 
 .logo {
@@ -93,13 +83,15 @@ header i {
 	text-align: center;
 	padding: 5px;
 	margin: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+}
+
+.side-header h1 {
+	font-size: 1.3em;
+	margin-top: 20px;
 }
 
 .logo h1 {
-	margin: 0;
+	margin-top: 3px;
 }
 
 .side-header i {
@@ -205,6 +197,24 @@ hr {
 #grey {color: #C4C4C4;}
 #light-green {color: #52BE80;}
 #dark-grey {color: #696969;}
+#greenish{
+	background-color: #ffffff;
+	color: #52BE80;
+	border: 1px solid #52BE80;
+}
+#greenish:hover {
+	background-color: #52BE80;
+	color: white;
+}
+#redish{
+	background-color: #ffffff;
+	color: #F96F5D;
+	border: 1px solid #F96F5D;
+}
+#redish:hover {
+	background-color: #F96F5D;
+	color: white;
+}
 
 .bottom-group {
 	padding: 20px;
@@ -234,13 +244,45 @@ hr {
 }
 
 /*share pop-up*/
-.share-popup, .add-label, .create-label, .create-section, .rename {
+.share-popup, .notif-popup, .add-label, .create-label, .create-section, .rename {
 	width: 30%;
 	background-color: white;
 	position: relative;
 	padding: 0 0 1.5%;
 }
-
+.note {
+	width: 80%;
+	background-color: white;
+	border: 1px solid #C4C4C4;
+	border-radius: 5px;
+	margin-left: 7%;
+	padding: 3% 0% 5% 5%;
+	color: #52BE80;
+	font-size: 18px;
+	margin-bottom: 5%;
+}
+.notebtn {
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+    background: #52BE80;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+	transition: .5s;
+	margin-right: 2%;
+}
+.note p{
+	color: black;
+	font-size: 13px;
+	display: inline-block;
+}
+.note h4{
+	margin-top: 0;
+	font-size: 16px;
+}
 .popup img {
 	margin: 5% 10% 0% 10%;
 	width: 80%;
@@ -286,13 +328,14 @@ hr {
 	margin:0;
 	color: #52BE80;
 	cursor: pointer;
+	text-decoration-line: underline;
 }
 
 .popup input[type=text] {
 	display: inline-block;
 	line-height: 20px;
 	width: 50%;
-	margin-left: 10%;
+	margin-left: 15%;
 	margin-right: 2%;
 	padding: 5px;
 	border: 1px solid #C4C4C4;

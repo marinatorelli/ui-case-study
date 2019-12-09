@@ -25,17 +25,38 @@
 			<h1>Share options</h1>
 			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
 			<hr>
-				<input type="text" placeholder="Email or username" autocomplete="off" required>
-				<input type="submit" class="logbtn" value="Invite"/>
+			<input type="text" placeholder="Email or username" autocomplete="off" required>
+			<input type="submit" class="logbtn" value="Invite"/>
 			<img src="images/drawing1.png">
 			<p class="title">Organise work together</p>
 			<div class = "description">Add colaborators, assign tasks and due dates, discuss details with comments and keep everyone on the same page.</div>
 			<div class = "how-to">
-				<i class="far fa-question-circle"></i>&nbsp How to colaborate with others?
+				<i class="far fa-question-circle">&nbsp</i>How to colaborate with others?
 			</div>
 		</div>
 	</div>
-	
+	<div class = "popup" id="notif">
+		<div class = "notif-popup">
+			<h1>Notifications</h1>
+			<i class="fas fa-times" onclick= close_popup(this.parentNode.parentNode)></i>
+			<hr>
+			<div class="note">
+				@milliecorrall &nbsp <p> has invited you to collaborate on </p>
+				<h4>"Lab 1 - computer networks"</h4>
+				<input type="submit" id="greenish" class="notebtn" value="Accept" onclick = closeElement(this.parentNode)>
+				<input type="submit" id="redish" class="notebtn" value="Decline" onclick = closeElement(this.parentNode)>
+			</div>
+			<div class="note">
+				@mhamilton &nbsp <p> replied to your comment on project </p>
+				<h4>"Theory Module 4 - computer architecture"</h4>
+				<input type="submit" id="greenish" class="notebtn" value="Reply"/>
+				<input type="submit" id="redish" class="notebtn" value="Like" onclick = closeElement(this.parentNode)>
+			</div>
+			<div class = "how-to">
+				<i class="far fa-question-circle">&nbsp</i>How to colaborate with others?
+			</div>
+		</div>
+	</div>
 	<div class = "popup" id="create-project">
 		<div class = "create-project">
 			<form class = "create-project-header" name="new-project" onsubmit="return false">
@@ -129,10 +150,8 @@
 	<header>
 		<img src="images/white_logo.png" alt="Logo">
 		<h1> <a href="./homepage.html"> Struo </a> </h1>
-		<div class="icons">
-			<i class="material-icons">notifications</i>
-			<i class="material-icons">settings</i>
-		</div>
+		<i class="material-icons">settings</i>
+		<i class="material-icons" onclick = show_popup('notif')>notifications</i>
 	</header>
 	<!-- SIDE MENU -->
 	<div class="side-bar">

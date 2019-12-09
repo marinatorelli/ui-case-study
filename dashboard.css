@@ -119,11 +119,10 @@ i {
 .task-title {
 	padding: 5% 3% 0;
 	display: flex;
-	align-items: center;
 }
 
 .task-title p {
-	margin: 0;
+	margin: 1px 0 0;
 	padding-left: 3%;
 }
 
@@ -150,25 +149,25 @@ i {
 	color: white;
 	font-size: 0.8em;
 	margin: 0 2%;
-	padding: 4px 7px;
-	display: flex;
-	align-items: center;
 }
 .tag i {
-	margin-right: 8px;
+	padding: 5px 7px;
+	float: left;
 	color: white;
 }
 .tag p {
 	margin: 0;
+	padding: 2px 7px 0 0;
+	float: left;
 }
 
-.mustard_background {background-color: #FFBD00;}
-.red_background {background-color: #C03221;}
-.purple_background {background-color: #9E7B9B;}
+.mustard_background {background-color: #FF9F1C;}
+.red_background {background-color: #F96F5D;}
+.purple_background {background-color: #9D8CB7;}
 
 .chat {
 	display: none;
-	width: 25%;
+	width: 30%;
 	position: absolute;
 	right: 0;
 	z-index: 3;
