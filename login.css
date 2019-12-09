@@ -1,0 +1,380 @@
+*, *:before, *:after {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body, html {
+	background: #ffffff;
+    scroll-behavior:smooth;
+    font-family: Roboto;
+    height: auto;
+}
+/* Clear floats after the columns */
+.top-row:after {
+	content: "";
+	display: table;
+    clear: both;
+    width: 100%;
+}
+.top-row {
+    background: #52BE80;
+}
+header {
+	box-sizing: border-box;
+	font-weight: bold;
+	color: white;
+	width: 20%;
+	float: left;
+	padding: 20px;
+	display: flex;
+}
+
+header img {
+	height: 60px;
+	width: 60px;
+}
+
+header h1 {
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+nav {
+	float: left;
+	margin-top: 40px;
+}
+
+/* Navigation link */
+.top-row a:link, a:visited {
+	color: white;
+	text-decoration: none;
+	margin: 30px;
+}
+
+a:hover {
+	color: #f2f2f2;
+}
+
+#login {
+	margin-top: 40px;
+	margin-right: 0;
+	float: right;
+}
+
+.button {
+	margin-top: 40px;
+	float: right;
+}
+
+.button a:link, .button a:visited {
+	text-align: center;
+	color: black;
+	background-color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.register a:hover {
+	background-color: #f2f2f2;
+}
+
+/*REGISTRATION FORM*/
+
+.registration{
+    font-weight: lighter;
+    width: 40%;
+    background-color: #ffffff;
+    height: auto;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border: 1px solid #52BE80;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    margin-bottom: 50px;
+	display: none;
+}
+.registration h2 {
+    font-size: 20px;
+    color: #52BE80;
+    padding-top: 50px;
+}
+.registerForm input:focus + .label-name .content,
+.registerForm input:valid + .label-name .content {
+    transform: translateY(-150%);
+    color: #52BE80;
+}
+
+.registerForm input:focus + .label-name::after,
+.registerForm input:valid + .label-name::after {
+    transform : translateX(0%);
+}
+.registerForm p {
+    color: #52BE80;
+    font-size: 18px;
+    padding-top: 30px;
+}
+.interest-column {
+    width: 30%;
+    display: inline-block;
+}
+
+.interest-column input{
+    margin-bottom: 20px;
+}
+#ggl {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+#face {
+    margin-bottom: 0;
+    width: 70%;
+    margin-left: 15%;
+}
+/* Customize the label (the container) */
+.container {
+    margin-left: 20%;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #52BE80;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* The container must be positioned relative: */
+
+/*LOGIN FORM*/
+
+.login{
+    font-weight: lighter;
+    width: 23%;
+    background-color: #ffffff;
+    height: 70%;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border: 1px solid #52BE80;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+}
+.socialbttn{
+    vertical-align: middle;
+    height: 38px;
+    width: 100%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #52BE80;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    font-family: Roboto;
+    font-size: 14px;
+}
+.socialbttn:hover{
+    background: #f4f4f4;
+
+}
+.socialbttn img {
+    align-content: center;
+    vertical-align: middle;
+    width: 25px;
+    height: auto;
+}
+.login h1{
+    text-align: center;
+    margin-bottom: 15%;
+    color: black;
+}
+.loginForm {
+    margin-top: 20%;
+}
+#log {
+    width: 100%;
+    position: relative;
+    height: 20%;
+    margin-bottom: 10%;
+    border:none;
+    overflow: hidden;
+}
+.credentials{
+    width: 100%;
+    position: relative;
+    height: 5%;
+    margin-bottom: 2%;
+    border:none;
+    overflow: hidden;
+}
+
+.credentials input{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding-top: 13%;
+    border: none;
+    outline: none;
+}
+
+.credentials label{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #333333;
+}
+
+.credentials label::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid;
+    border-bottom-color: #52BE80;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow: auto;
+}
+
+.content{
+    position:absolute;
+    bottom: 5%;
+    left:0;
+    transition: all 0.3s ease;
+    color: #333333;
+}
+
+.loginForm input:focus + .label-name .content,
+.loginForm input:valid + .label-name .content {
+    transform: translateY(-150%);
+    color: #52BE80;
+}
+
+.loginForm input:focus + .label-name::after,
+.loginForm input:valid + .label-name::after {
+    transform : translateX(0%);
+}
+
+
+.logbtn{
+    display: block;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #52BE80 0%, #264653 100%);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 25%;
+}
+  
+.logbtn:hover, #save:hover, #delete:hover {
+    background-position: right;
+}
+  
+.signup-q{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20%;
+    color: black;
+}
+
+.signup-q a {
+    color: #52BE80;
+    text-decoration-line: underline;
+}
+.terms {
+    margin-left: 18%;
+    font-size: 14px;
+}
+#save {
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 7%;
+    display: inline-block;
+    background: linear-gradient(to right, #52BE80 0%, #38726C 100%);
+    background-size: 200%;
+    transition: .5s;
+    margin-bottom: 5%;
+}
+#delete {
+    margin-top: 5%;
+    width: 30%;
+    display: inline-block;
+    margin-left: 5%;
+    background: linear-gradient(to right, #F96F5D 0%, #C81D25 100%);
+    background-size: 200%;
+    transition: .5s;
+    margin-bottom: 5%;
+}

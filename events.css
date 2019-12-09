@@ -10,20 +10,17 @@
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0 2% 0 4%;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
 }
 
 .events-header h1 {
-	margin-right: auto;
+	float: left;
 }
 
 .events-header i {
 	float: right;
 	color: #c4c4c4;
 	font-size: 2em;
-	margin: 0 4px;
+	margin: 28px 4px 0;
 }
 
 .search-bar {
@@ -33,7 +30,7 @@
 	background-color: #52BE80;
 	float: right;
 	color: white;
-	margin: 0 15px 0;
+	margin: 28px 15px 0;
 }
 
 .search-bar i{

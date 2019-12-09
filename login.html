@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--Setting language to english-->
+<html lang="en">
+<head>
+    <!--Creatting the header with its properties-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<title> Struo </title>
+    
+	<!--Linking to the page the css style-->
+    <link rel="stylesheet" href="login.css">
+    
+	<!--This java script is a link for the different icons we have used on the page-->
+    <script src="https://kit.fontawesome.com/8debf2254f.js"></script>
+
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script scr="jlogin.js"></script>
+    -->
+</head>
+
+
+<body>
+	<!-- HEADER AND NAVIGATION MENU -->
+	<div class="top-row">
+		<header>
+			<img src="images/white_logo.png" alt="Logo">
+			<h1>Struo</h1>
+		</header>	
+		<nav>
+			<a href="#">Templates</a>
+			<a href="#">Features</a>
+			<a href="#">For teams</a>
+			<a href="#">Pricing</a>
+		</nav>
+		<div class="button">
+			<a href="#"> Sign Up </a>
+		</div>
+		<a id="login" href="#"> Login </a>
+    </div>
+
+    <!-- REGISTRATION FORM -->
+    <div class="registration">
+        <button class="socialbttn" id="ggl">Sign up with Google &nbsp; <img src="https://img.icons8.com/color/48/000000/google-logo.png"></button>
+        <button class="socialbttn" id="face">Sign up with Facebook &nbsp; <img src="https://img.icons8.com/color/48/000000/facebook-new.png"></button>
+        <form name="registerForm" class="registerForm" onsubmit = "return validateRegistration()">
+            <h2> Account Information </h2>
+            <div class="credentials">
+                <input type="text" name="username" autocomplete="off" required>
+                <label for="username" class="label-name">
+                    <span class="content">Username*</span>
+                </label>
+            </div>
+            <div class="credentials">
+                <input type="password" name="password" autocomplete="off" pattern="[a-z0-9]+" required/>
+                <label for="password" class="label-name">
+                    <span class="content">Password* (only lowercase letters and numbers allowed)</span>
+                </label>
+            </div>
+            <h2> Personal Information </h2>
+            <div class="credentials">
+                <input type="text" name="name" id="name" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content">Name*</span>
+                </label>
+            </div>
+            <div class="credentials">
+                <input type="text" name="surname" id="surname" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content">Surname*</span>
+                </label>
+            </div>
+            <!-- Email: Follows format name@domain.extension -->
+            <div class="credentials">
+                <input type="text" name="email" id="email" pattern="[a-z]+@[a-z]+\.[a-z]+" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content">Email*</span>
+                </label>
+            </div>
+            <div class="credentials">
+                <input type="text" name="birthdate" id="birthdate"  onfocus="(this.type='date')" autocomplete="off" required>
+                <label for="name" class="label-name">
+                    <span class="content">Birthdate*</span>
+                </label>
+            </div>
+            <p>Interests:</p>
+            <br>
+                <!-- User can check several checkboxes with different interests, displayed in two columns -->
+                <div class="interest-column">
+                    <label class="container">
+                        <input name="sports" value="Sports" type="checkbox"> Sports <br>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input name="cooking" value="Cooking" type="checkbox"> Cooking <br>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input name="food" value="Food" type="checkbox"> Food <br>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="interest-column">
+                    <label class="container">
+                        <input name="cinema" value="Cinema" type="checkbox"> Cinema <br>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input name="music" value="Music" type="checkbox"> Music <br>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input name="books" value="Books" type="checkbox"> Books <br>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="interest-column">
+                    <label class="container">
+                        <input name="languages" value="Languages" type="checkbox"> Languages <br>
+                        <span class="checkmark"></span>
+                    </label> 
+                    <label class="container">
+                        <input name="programming" value="Programming" type="checkbox"> Programming <br>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input name="videogames" value="VideoGames" type="checkbox"> Video Games <br>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <br>
+                <br>
+                <!-- Check that the user has read the terms of use -->
+                <br>
+                <div class="terms">
+                    <input name="terms" type="checkbox" required>&nbsp; I have read and accept the Terms of Use * <br>
+                </div>
+                <br>
+                <input type="submit" class="logbtn" id="save" value="Save"> <!-- Submit form, calling the function validateRegistration -->
+                <input type="reset" class="logbtn" id="delete" value="Delete"> <!-- Delete the content of all fields -->
+        </form>
+    </div>
+    <!-- LOGIN FORM -->
+    <div class="login">
+        <button class="socialbttn">Log in with Google &nbsp; <img src="https://img.icons8.com/color/48/000000/google-logo.png"></button>
+        <button class="socialbttn">Log in with Facebook &nbsp; <img src="https://img.icons8.com/color/48/000000/facebook-new.png"></button>
+    
+        <form class="loginForm" onsubmit="return checkLogin()" action="dashboard.html">
+            <div class="credentials" id="log">
+                <input type="email" name="email" autocomplete="off" required pattern="[A-Za-z0-9]{1,8}"/>
+                <label for="email" class="label-name">
+                    <span class="content">Email</span>
+                </label>
+            </div>
+
+            <div class="credentials" id="log">
+                <input type="password" name="psw" autocomplete="off" required/>
+                <label for="password" class="label-name">
+                    <span class="content">Password</span>
+                </label>
+            </div>
+
+            <input type="submit" class="logbtn" value="Login">
+
+            <div class="signup-q">
+                Don't have an account? <a href="register.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

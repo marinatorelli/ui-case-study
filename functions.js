@@ -1,3 +1,135 @@
+/* Function that displays the registration form when the register link in the navigation bar is clicked */
+function register() {
+	document.getElementsByClassName("registration")[0].style.display = "block";
+	/* In case the login form was already displayed it hides it */
+	document.getElementsByClassName("login")[0].style.display = "none";
+}
+
+/* Function that displays the login form when the login link is clicked */
+function login() {
+	/* In case the registration form was displayed it hides it */
+	document.getElementsByClassName("registration")[0].style.display = "none";
+	document.getElementsByClassName("login")[0].style.display = "block";
+}
+
+/* Function that displays the registration form when the register link in the navigation bar is clicked */
+function register() {
+	document.getElementsByClassName("registration")[0].style.display = "block";
+	/* In case the login form was already displayed it hides it */
+	document.getElementsByClassName("login")[0].style.display = "none";
+}
+
+/* Function that displays the login form when the login link is clicked */
+function login() {
+	/* In case the registration form was displayed it hides it */
+	document.getElementsByClassName("registration")[0].style.display = "none";
+	document.getElementsByClassName("login")[0].style.display = "block";
+}
+
+/* Function that validates the registration form */
+function validateRegistration() {
+	/* Number of inputs in the form */
+	var n = document.forms["registerForm"].length;
+	var str = ""; /* String where we will store the value of the cookie (values of the form separated by a ,) */
+	var cookieName;
+	/* We need to check the value of every input except the last three (the terms of use, the submit button and reset button */
+	for (var i =  0; i < n-3; i++) {
+		/* Get the value entered in the form */
+		var fieldName = document.forms["registerForm"][i].name;
+		var value = document.forms["registerForm"][fieldName].value;
+		/* In the case of the email, the function checks that it isn't already stored in a cookie */
+		if (fieldName == "email") {
+			/* If the email is already in a cookie the form can't be validated */
+			if (getCookie(value) != "") {
+				window.alert("This email already exists");
+				return false;
+			}
+			/* If the email isn't already taken we set its value to be the name of the cookie */
+			cookieName = value; /* We skip the rest of the iteration as we don't need to store it in the value */
+			continue;
+		}
+		var type = document.forms["registerForm"][fieldName].type;
+		var checked = true;
+		/* For the interests checkboxes, we store their value only if they have been checked */
+		if (type == "checkbox") {
+			checked = document.forms["registerForm"][fieldName].checked;
+		}
+		/* If the value wasn't selected or the checkbox wasn't checked the value stored in the cookie will be "empty" */
+		if (value == "" || !checked)  value = "empty";
+		if (i == 0) str = str.concat(value);
+		/* All elements except the first one will go after a , */
+		else str = str.concat(",",value);
+	}
+	/* Store the values in a cookie */
+	document.cookie = cookieName + "=" + str;
+	return true;
+}
+
+/* Function that given the name of a cookie it returns its value */
+function getCookie(name) {
+	var name = name + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+		c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+		return c.substring(name.length, c.length);
+		}
+	}	
+	return "";
+}
+
+/* Function that given a cookie and a field of the registration form it returns the value of that cookie for that field */
+function getValueFromCookie(cookieName, field) {
+	/* Get the string of values from the cookie */
+	var str = getCookie(cookieName);
+	var values = str.split(','); /* Split the values by the , */
+	var n = document.forms["registerForm"].length;
+	/* Go over every field of the registration form to look for the index of the one we're looking for */
+	for (var i = 0; i < n-3; i++) {
+		var fieldName = document.forms["registerForm"][i].name;
+		if (fieldName == field) {
+			/* Return the cookie value in the index of the field */
+			return values[i];
+		}
+	}
+	/* Return an empty string if the value wasn't found */
+	return "";
+}
+
+/* Function that validates the login form */
+function checkLogin() {
+	/* Get the email and password written by the user */
+	var inputEmail = document.forms["loginForm"]["email"].value;
+	var inputpsw = document.forms["loginForm"]["psw"].value;
+	/* Look for the cookie with the same email and get the value of its psw field */
+	var psw = getValueFromCookie(inputEmail,"psw");
+	/* If a password is found and it equals the one input, the cookie exists and the information is correct */
+	if (psw == inputpsw) {
+		var name = getValueFromCookie(inputEmail,"name");
+		window.alert("Welcome "+ name);
+		return true;
+	} else { /* If the email isn't in a cookie or the psw is incorrect the form isn't validated and an alert is displayed */
+		window.alert("The email or password aren't correct");
+		return false;
+	}
+}
+
+/* JQuery function that stores a cookie with the username after the login form is validated */
+$(document).ready(function(){
+    $('form[name="loginForm"]').on("submit",function(){
+		var inputEmail = document.forms["loginForm"]["email"].value;
+		/* Get the username associated with the cookie with the input email */
+		var username = getValueFromCookie(inputEmail,"username");
+		/* Store it in the cookie with name username, to be used in exercise2.html to display the username */
+        document.cookie = "username="+username;
+    });
+});
+
+
 /* Function that receives as argument a sidebar menu and hides the elements */
 function showMenu(element) {
 	/* We get the children of the div menu, the div with the elements has index 1 as it comes after the header */
